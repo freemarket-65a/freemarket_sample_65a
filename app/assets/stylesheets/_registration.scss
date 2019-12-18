@@ -1,0 +1,74 @@
+body{
+  background: rgb(245, 245, 245);
+  text-align: center;
+}
+
+.single-header{
+  height: 128px;
+  &__logo{   
+    padding-top: 40px;
+  }
+  &__logo img{
+    width: 185px;
+    height: 49px;
+  }
+  
+}
+
+.single-main{
+  background: #fff;
+  width: 700px;
+  margin: 0 auto;
+  h2{
+    font-size: 22px;
+    padding: 32px;
+  }
+  &__inner{
+    padding: 24px 16px 40px;
+    &--content{
+      max-width: 343px;
+      .btn{
+        display: block;
+        width: 100%;
+        line-height: 48px;
+        font-size: 14px;
+        border: 1px solid transparent;
+        -webkit-transition: all ease-out .3s;
+        transition: all ease-out .3s;
+        cursor: pointer;
+        text-align: center;
+      }
+      .btn-mail{
+        background-color: red;
+      }
+      .btn-facebook{
+        background-color: blue;
+      }
+      .btn-google{
+        border: solid 1px;
+      }
+    }
+  }
+}
+
+
+.single-footer{
+  height: 128px;
+  text-align: center;
+  ul{
+    li{
+      list-style: none;
+      display: inline-block;
+      padding: 0 40px;
+    } 
+  }
+  &__logo{
+    text-align: center;
+    padding-top: 40px;
+  }
+  &__logo img{
+    width: 80px;
+    height: 65px;
+  }
+  
+}
