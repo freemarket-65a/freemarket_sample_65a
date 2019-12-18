@@ -1,0 +1,14 @@
+.pickup-content
+  = link_to product_path(product.id) do
+    %figure.content__box
+      .img_content
+      - if product.images.present?
+        = image_tag "#{product.images[0].image}", class:'pickup-content__img'
+        .img_title
+          %p.img_price
+            ="¥#{product.price}"
+      - else
+        = image_tag "", class:'pickup-content__img'
+      %figcaption.text__box 
+        %span 
+          = product.name

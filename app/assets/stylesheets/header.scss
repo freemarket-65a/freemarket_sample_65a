@@ -1,0 +1,30 @@
+.header-logo{
+  width: 140px;    /* 横幅を割合で指定 */
+  height: auto;  /* 高さは自動指定 */
+  float: left;
+  margin-left: 80px;
+}
+
+.header-search{
+  height: 54px;
+}
+
+.search-top-i{
+  margin-left: 35px;
+  width: 800px;
+  font-size: 20px;
+}
+
+.header-bottom{
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-bottom-left{
+  margin-left: 110px;
+  padding-bottom: 20px;
+}
+
+.header-bottom-raight{
+  margin-right: 110px;
+}

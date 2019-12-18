@@ -1,0 +1,87 @@
+= render 'header'
+
+.toppage-main
+  .top-image
+    %ul.slider
+      %li
+        = image_tag("https://web-jp-assets.mercdn.net/_next/static/images/top-banner-camp-4f3fd88c685e8932d7dde2ad3a8336ba.jpg",height:"400px", width:"100%")
+    -#   %li
+    -#     = image_tag("products/top-banner-main.jpg", height:"400px", width:"100%")
+    -# %div{id: "arrows"}
+    -#   .slick-next
+    -#     = image_tag("https://web-jp-assets.mercdn.net/_next/static/images/carousel-next-bc3a1438a1435e953bc67d720cd05c61.png")
+    -#   .slick-prev
+    -#     = image_tag("https://web-jp-assets.mercdn.net/_next/static/images/carousel-prev-af7ca886ce42c4c02610cd15421ddcad.png")
+  .pickup-container
+    .pickup-header
+      %h2.pickup-header__name
+        人気のカテゴリ
+      .pickup-header__categoly
+        %ul
+          %li
+            レディース
+          %li
+            メンズ
+          %li
+            家電・スマホ・カメラ
+          %li
+            おもちゃ・ホビー・グッズ
+    .pickup-contents
+      .pickup-content
+        .pickup-content__img
+        .pickup-content__text__box
+      .pickup-content__price-box
+        .pickup-contents-box
+          .pickup-contents__header
+            .pickup-contents__header-name
+              レディース新着アイテム
+            .pickup-contents__header-more
+              = link_to "もっと見る ＞", "#"
+          .pickup-contents__image
+            = image_tag "tulip.jpg", class:"tulip" 
+            -# = render partial: 'product', collection: @ladiesproducts
+    .pickup-contents
+      .pickup-content
+        .pickup-content__img
+        .pickup-content__text__box
+      .pickup-content__price-box
+        .pickup-contents-box
+          .pickup-contents__header
+            .pickup-contents__header-name
+              メンズ新着アイテム
+            .pickup-contents__header-more
+              = link_to "もっと見る ＞", "#"
+          .pickup-contents__image
+            = image_tag "tulip.jpg", class:"tulip" 
+            -# = render partial: 'product', collection: @mensproducts
+    .pickup-contents
+      .pickup-content
+        .pickup-content__img
+        .pickup-content__text__box
+      .pickup-content__price-box
+        .pickup-contents-box
+          .pickup-contents__header
+            .pickup-contents__header-name
+              家電・スマホ・カメラ新着アイテム
+            .pickup-contents__header-more
+              = link_to "もっと見る ＞", "#"
+          .pickup-contents__image
+            = image_tag "tulip.jpg", class:"tulip" 
+            -# = render partial: 'product', collection: @appliancesproducts
+    .pickup-contents
+      .pickup-content
+        .pickup-content__img
+        .pickup-content__text__box
+      .pickup-content__price-box
+        .pickup-contents-box
+          .pickup-contents__header
+            .pickup-contents__header-name
+              おもちゃ・ホビー・グッズ新着アイテム
+            .pickup-contents__header-more
+              = link_to "もっと見る ＞", "#"
+          .pickup-contents__image
+            .pickup-contents__image2
+              = image_tag "tulip.jpg", class:"tulip" 
+            -# = render partial: 'product', collection: @toysproducts
+
+= render 'footer'
