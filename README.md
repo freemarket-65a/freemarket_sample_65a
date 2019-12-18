@@ -23,10 +23,116 @@ Things you may want to cover:
 
 * ...
 
+## usersテーブル
+
+|Column       |Type       |Options                        |
+|-------------|-----------|-------------------------------|
+|nickname     |string     |null: false , add_index        |
+|email        |string     |null: false                    |
+|password     |string     |null: false                    |
+|famili_name  |string     |null: false                    |
+|last_name    |string     |null: false                    |
+|birthday     |integer    |null: false                    |
+|products_id  |references |null: false, foreign_key: true |
+
+### Association
+- has_many :users_comments
+- has_many :comments,  through:  :users_comments
+- has_many :products
+- has_one  :pay
 
 
+## paysテーブル
+
+|Column          |Type        |Options                        |
+|----------------|------------|-------------------------------|
+|user_id         |references  |null: false, foreign_key: true |
+|card_number     |integer     |null: false                    |
+|year            |integer     |null: false                    |
+|month           |integer     |null: false                    |
+|name            |string      |null: false                    |
+|security_number |integer     |null: false                    |
+
+### Association
+- belongs_to :user
 
 
+## commentsテーブル
+
+|Column          |Type        |Options                        |
+|----------------|------------|-------------------------------|
+|product_id      |references  |null: false, foreign_key: true |
+|comment         |text        |null: false                    |
+
+### Association
+- has_many :users_comments
+- has_many :users,  through:  :users_comments
+- belongs_to :product
+
+
+## users_commentsテーブル
+
+|Column          |Type        |Options                        |
+|----------------|------------|-------------------------------|
+|user_id         |references  |null: false, foreign_key: true |
+|comment_id      |references  |null: false, foreign_key: true |
+
+### Association
+- belongs_to :user
+- belongs_to :comment
+
+
+## productsテーブル
+
+|Column           |Type        |Options                        |
+|-----------------|------------|-------------------------------|
+|user_id          |references  |null: false, foreign_key: true |
+|category_id      |references  |null: false, foreign_key: true |
+|bland_id         |references  |null: false, foreign_key: true |
+|price            |integer     |null: false                    |
+|registration_date|string      |null: false                    |
+|shipping_charges |string      |null: false                    |
+|shipping_area    |string      |null: false                    |
+
+### Association
+- belongs_to :user
+- has_many :comments
+- has_many :images
+- has_many :categories
+- has_one  :bland
+
+
+## imagesテーブル
+
+|Column          |Type        |Options                        |
+|----------------|------------|-------------------------------|
+|products_id     |references  |null: false, foreign_key: true |
+|image           |text        |null: false                    |
+
+### Association
+- belongs_to :product
+
+
+## categoriesテーブル
+
+|Column          |Type        |Options                        |
+|----------------|------------|-------------------------------|
+|path            |integer     |null: false                    |
+|category        |string      |null: false                    |
+
+### Association
+- belongs_to :product
+
+
+## blandsテーブル
+
+|Column          |Type        |Options                        |
+|----------------|------------|-------------------------------|
+|path            |integer     |null: false                    |
+|blamd           |string      |null: false                    |
+
+### Association
+- belongs_to :product
 
 
 
