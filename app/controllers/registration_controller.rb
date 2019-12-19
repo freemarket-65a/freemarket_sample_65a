@@ -5,5 +5,7 @@ class RegistrationController < ApplicationController
   def member
   end
 
+  def telephone
+  end
 
 end
