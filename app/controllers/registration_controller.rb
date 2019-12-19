@@ -10,4 +10,10 @@ class RegistrationController < ApplicationController
 
   def address
   end
+
+  def payment
+  end
+
+  def complete
+  end
 end

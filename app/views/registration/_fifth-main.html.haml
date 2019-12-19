@@ -2,27 +2,15 @@
   %h2 支払い方法
   .single-main__inner
     .single-main__inner--content
-      .text お名前 必須 
+      .text カード番号 必須 
+      %input.login-input-text{:name => "email", :placeholder => "メールアドレス", :type => "email", :value => ""}/
+      .text 有効期限 必須
       %input.login-input-text{:name => "email", :placeholder => "メールアドレス", :type => "email", :value => ""}/
       %input.login-input-text{:name => "email", :placeholder => "メールアドレス", :type => "email", :value => ""}/
-      .text お名前カナ 必須
-      %input.login-input-text{:name => "email", :placeholder => "メールアドレス", :type => "email", :value => ""}/
-      %input.login-input-text{:name => "email", :placeholder => "メールアドレス", :type => "email", :value => ""}/
-      .text 郵便番号 必須
-      %input.login-input-text{:name => "email", :placeholder => "メールアドレス", :type => "email", :value => ""}/
-      .text 都道府県 必須
-      %input.login-input-text{:name => "email", :placeholder => "メールアドレス", :type => "email", :value => ""}/
-      .text 市区町村 必須
-      %input.login-input-text{:name => "email", :placeholder => "メールアドレス", :type => "email", :value => ""}/
-      .text 番地 必須
-      %input.login-input-text{:name => "email", :placeholder => "メールアドレス", :type => "email", :value => ""}/
-      .text 建物名 任意
-      %input.login-input-text{:name => "email", :placeholder => "メールアドレス", :type => "email", :value => ""}/
-      .text 電話 任意
+      .text セキュリティコード 必須
       %input.login-input-text{:name => "email", :placeholder => "メールアドレス", :type => "email", :value => ""}/
 
       .text「次へ進む」のボタンを押すことにより、利用規約に同意したものとみなします
 
       %a.btn.btn-mail{ :href => "https://www.mercari.com/jp/signup/registration/"}次へ進む
-
-
+      
