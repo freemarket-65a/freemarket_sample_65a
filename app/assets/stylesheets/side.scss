@@ -1,0 +1,37 @@
+.l-side {
+  width: 280px;  
+}
+
+.mypage-nav-list{
+  list-style: none;
+}
+
+a { 
+  text-decoration: none; 
+}
+
+.mypage-nav-list-item {
+  position: relative;
+  display: block;
+  min-height: 14px;
+  padding: 16px;
+  background: #fff;
+  font-size: 14px;
+  color: #333;
+  border-style: solid;
+  border: solid 1px #c9c9c9;
+}
+
+.mypage-nav-list-item-myp{
+  position: relative;
+  display: block;
+  min-height: 14px;
+  padding: 16px;
+  background: rgb(224, 224, 224);
+  font-size: 14px;
+  color: #333;
+  border-style: solid;
+  border: solid 1px #c9c9c9;
+  font-weight: bold;
+}
+
