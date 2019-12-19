@@ -970,3 +970,212 @@ Processing by RegistrationController#new as HTML
 Completed 200 OK in 81ms (Views: 76.8ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2019-12-19 11:50:55 +0900
+  [1m[35m (15.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/yamamoto/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4/lib/active_record/log_subscriber.rb:98
+Processing by RegistrationController#new as HTML
+  Rendering registration/new.html.haml within layouts/application
+  Rendered registration/_single-header.html.haml (3.3ms)
+  Rendered registration/_single-main.html.haml (5.1ms)
+  Rendered registration/_single-footer.html.haml (7.1ms)
+  Rendered registration/new.html.haml within layouts/application (34.1ms)
+Completed 200 OK in 349ms (Views: 339.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-12-19 11:50:58 +0900
+Processing by RegistrationController#new as HTML
+  Rendering registration/new.html.haml within layouts/application
+  Rendered registration/_single-header.html.haml (2.9ms)
+  Rendered registration/_single-main.html.haml (2.9ms)
+  Rendered registration/_single-footer.html.haml (4.6ms)
+  Rendered registration/new.html.haml within layouts/application (21.4ms)
+Completed 200 OK in 49ms (Views: 45.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-12-19 11:52:02 +0900
+Processing by RegistrationController#new as HTML
+  Rendering registration/new.html.haml within layouts/application
+  Rendered registration/_single-header.html.haml (4.2ms)
+  Rendered registration/_single-main.html.haml (3.5ms)
+  Rendered registration/_single-footer.html.haml (3.4ms)
+  Rendered registration/new.html.haml within layouts/application (23.1ms)
+Completed 500 Internal Server Error in 61ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: /bese./registration-base.scss.
+Load paths:
+  /Users/yamamoto/Desktop/practice/freemarket_sample_65a/app/assets/config
+  /Users/yamamoto/Desktop/practice/freemarket_sample_65a/app/assets/images
+  /Users/yamamoto/Desktop/practice/freemarket_sample_65a/app/assets/javascripts
+  /Users/yamamoto/Desktop/practice/freemarket_sample_65a/app/assets/stylesheets
+  /Users/yamamoto/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/yamamoto/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actioncable-5.2.4/lib/assets/compiled
+  /Users/yamamoto/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activestorage-5.2.4/app/assets/javascripts
+  /Users/yamamoto/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionview-5.2.4/lib/assets/compiled
+  /Users/yamamoto/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /Users/yamamoto/Desktop/practice/freemarket_sample_65a/node_modules):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+  
+app/assets/stylesheets/application.scss:2
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__1354870808321877227_70140706797940'
+Started GET "/" for ::1 at 2019-12-19 11:52:19 +0900
+Processing by RegistrationController#new as HTML
+  Rendering registration/new.html.haml within layouts/application
+  Rendered registration/_single-header.html.haml (4.4ms)
+  Rendered registration/_single-main.html.haml (5.0ms)
+  Rendered registration/_single-footer.html.haml (2.6ms)
+  Rendered registration/new.html.haml within layouts/application (23.0ms)
+Completed 500 Internal Server Error in 50ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: /base./registration-base.scss.
+Load paths:
+  /Users/yamamoto/Desktop/practice/freemarket_sample_65a/app/assets/config
+  /Users/yamamoto/Desktop/practice/freemarket_sample_65a/app/assets/images
+  /Users/yamamoto/Desktop/practice/freemarket_sample_65a/app/assets/javascripts
+  /Users/yamamoto/Desktop/practice/freemarket_sample_65a/app/assets/stylesheets
+  /Users/yamamoto/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/yamamoto/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actioncable-5.2.4/lib/assets/compiled
+  /Users/yamamoto/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activestorage-5.2.4/app/assets/javascripts
+  /Users/yamamoto/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionview-5.2.4/lib/assets/compiled
+  /Users/yamamoto/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /Users/yamamoto/Desktop/practice/freemarket_sample_65a/node_modules):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+  
+app/assets/stylesheets/application.scss:2
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__1354870808321877227_70140705556100'
+Started GET "/" for ::1 at 2019-12-19 11:52:32 +0900
+Processing by RegistrationController#new as HTML
+  Rendering registration/new.html.haml within layouts/application
+  Rendered registration/_single-header.html.haml (3.5ms)
+  Rendered registration/_single-main.html.haml (4.6ms)
+  Rendered registration/_single-footer.html.haml (3.1ms)
+  Rendered registration/new.html.haml within layouts/application (24.3ms)
+Completed 500 Internal Server Error in 56ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: /base/.registration-base.scss.
+Load paths:
+  /Users/yamamoto/Desktop/practice/freemarket_sample_65a/app/assets/config
+  /Users/yamamoto/Desktop/practice/freemarket_sample_65a/app/assets/images
+  /Users/yamamoto/Desktop/practice/freemarket_sample_65a/app/assets/javascripts
+  /Users/yamamoto/Desktop/practice/freemarket_sample_65a/app/assets/stylesheets
+  /Users/yamamoto/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/yamamoto/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actioncable-5.2.4/lib/assets/compiled
+  /Users/yamamoto/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activestorage-5.2.4/app/assets/javascripts
+  /Users/yamamoto/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionview-5.2.4/lib/assets/compiled
+  /Users/yamamoto/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /Users/yamamoto/Desktop/practice/freemarket_sample_65a/node_modules):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+  
+app/assets/stylesheets/application.scss:2
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__1354870808321877227_70140706712420'
+Started GET "/" for ::1 at 2019-12-19 11:53:32 +0900
+Processing by RegistrationController#new as HTML
+  Rendering registration/new.html.haml within layouts/application
+  Rendered registration/_single-header.html.haml (3.2ms)
+  Rendered registration/_single-main.html.haml (4.4ms)
+  Rendered registration/_single-footer.html.haml (4.3ms)
+  Rendered registration/new.html.haml within layouts/application (22.6ms)
+Completed 500 Internal Server Error in 64ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: /base/registration-base.scss.
+Load paths:
+  /Users/yamamoto/Desktop/practice/freemarket_sample_65a/app/assets/config
+  /Users/yamamoto/Desktop/practice/freemarket_sample_65a/app/assets/images
+  /Users/yamamoto/Desktop/practice/freemarket_sample_65a/app/assets/javascripts
+  /Users/yamamoto/Desktop/practice/freemarket_sample_65a/app/assets/stylesheets
+  /Users/yamamoto/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/yamamoto/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actioncable-5.2.4/lib/assets/compiled
+  /Users/yamamoto/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activestorage-5.2.4/app/assets/javascripts
+  /Users/yamamoto/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionview-5.2.4/lib/assets/compiled
+  /Users/yamamoto/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /Users/yamamoto/Desktop/practice/freemarket_sample_65a/node_modules):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+  
+app/assets/stylesheets/application.scss:2
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__1354870808321877227_70140691829820'
+Started GET "/" for ::1 at 2019-12-19 11:53:36 +0900
+Processing by RegistrationController#new as HTML
+  Rendering registration/new.html.haml within layouts/application
+  Rendered registration/_single-header.html.haml (3.6ms)
+  Rendered registration/_single-main.html.haml (3.5ms)
+  Rendered registration/_single-footer.html.haml (2.5ms)
+  Rendered registration/new.html.haml within layouts/application (20.4ms)
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: /base/registration-base.scss.
+Load paths:
+  /Users/yamamoto/Desktop/practice/freemarket_sample_65a/app/assets/config
+  /Users/yamamoto/Desktop/practice/freemarket_sample_65a/app/assets/images
+  /Users/yamamoto/Desktop/practice/freemarket_sample_65a/app/assets/javascripts
+  /Users/yamamoto/Desktop/practice/freemarket_sample_65a/app/assets/stylesheets
+  /Users/yamamoto/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/yamamoto/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actioncable-5.2.4/lib/assets/compiled
+  /Users/yamamoto/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activestorage-5.2.4/app/assets/javascripts
+  /Users/yamamoto/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionview-5.2.4/lib/assets/compiled
+  /Users/yamamoto/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /Users/yamamoto/Desktop/practice/freemarket_sample_65a/node_modules):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+  
+app/assets/stylesheets/application.scss:2
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__1354870808321877227_70140693898460'
+Started GET "/" for ::1 at 2019-12-19 11:54:16 +0900
+Processing by RegistrationController#new as HTML
+  Rendering registration/new.html.haml within layouts/application
+  Rendered registration/_single-header.html.haml (3.0ms)
+  Rendered registration/_single-main.html.haml (3.6ms)
+  Rendered registration/_single-footer.html.haml (3.2ms)
+  Rendered registration/new.html.haml within layouts/application (21.4ms)
+Completed 200 OK in 84ms (Views: 80.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-12-19 12:03:16 +0900
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/yamamoto/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4/lib/active_record/log_subscriber.rb:98
+Processing by RegistrationController#new as HTML
+  Rendering registration/new.html.haml within layouts/application
+  Rendered registration/_single-header.html.haml (3.2ms)
+  Rendered registration/_single-main.html.haml (4.3ms)
+  Rendered registration/_single-footer.html.haml (2.7ms)
+  Rendered registration/new.html.haml within layouts/application (22.7ms)
+Completed 200 OK in 89ms (Views: 85.9ms | ActiveRecord: 0.0ms)
+
+
