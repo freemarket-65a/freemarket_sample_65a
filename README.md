@@ -36,8 +36,7 @@ Things you may want to cover:
 |products_id  |references |null: false, foreign_key: true |
 
 ### Association
-- has_many :users_comments
-- has_many :comments,  through:  :users_comments
+- has_many :comments
 - has_many :products
 - has_one  :pay
 
@@ -65,8 +64,7 @@ Things you may want to cover:
 |comment         |text        |null: false                    |
 
 ### Association
-- has_many :users_comments
-- has_many :users,  through:  :users_comments
+- belongs_to :user
 - belongs_to :product
 
 
