@@ -8,4 +8,6 @@ class RegistrationController < ApplicationController
   def telephone
   end
 
+  def address
+  end
 end
