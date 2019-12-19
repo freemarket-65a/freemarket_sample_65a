@@ -1,0 +1,21 @@
+.btn{
+  display: block;
+  width: 100%;
+  line-height: 48px;
+  font-size: 14px;
+  border: 1px solid transparent;
+  -webkit-transition: all ease-out .3s;
+  transition: all ease-out .3s;
+  cursor: pointer;
+  text-align: center;
+
+}
+.btn-mail{
+  background-color: red;
+}
+.btn-facebook{
+  background-color: blue;
+}
+.btn-google{
+  border: solid 1px;
+}
