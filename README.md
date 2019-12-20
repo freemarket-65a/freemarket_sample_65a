@@ -33,7 +33,6 @@ Things you may want to cover:
 |famili_name  |string     |null: false                    |
 |last_name    |string     |null: false                    |
 |birthday     |integer    |null: false                    |
-|products_id  |references |null: false, foreign_key: true |
 
 ### Association
 - has_many :comments
@@ -85,7 +84,7 @@ Things you may want to cover:
 - belongs_to :user
 - has_many :comments
 - has_many :images
-- belongs_to :categorie
+- belongs_to :category
 - belongs_to  :bland
 
 
@@ -104,7 +103,6 @@ Things you may want to cover:
 
 |Column          |Type        |Options                        |
 |----------------|------------|-------------------------------|
-|path            |integer     |null: false                    |
 |ancestry        |string      |null: false                    |
 
 ### Association
@@ -116,7 +114,6 @@ Things you may want to cover:
 
 |Column          |Type        |Options                        |
 |----------------|------------|-------------------------------|
-|path            |integer     |null: false                    |
 |blamd           |string      |null: false                    |
 
 ### Association
