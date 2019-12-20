@@ -92,7 +92,7 @@ belongs_to :user
 |category_id      |references  |null: false, foreign_key: true |
 |bland_id         |references  |null: false, foreign_key: true |
 |price            |integer     |null: false                    |
-|product_name     |string      |null: false                    |
+|name             |string      |null: false                    |
 |registration_date|string      |null: false                    |
 |shipping_charges |string      |null: false                    |
 |shipping_area    |string      |null: false                    |
