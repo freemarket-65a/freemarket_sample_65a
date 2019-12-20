@@ -37,8 +37,8 @@ Things you may want to cover:
 ### Association
 - has_many :comments
 - has_many :products
-- has_one  :pay
-- has_one  :address
+- has_one  :pay, dependent: destroy
+- has_one  :address, dependent: destroy
 
 
 ## addressesテーブル
