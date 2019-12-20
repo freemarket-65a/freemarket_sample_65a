@@ -90,7 +90,7 @@ belongs_to :user
 |-----------------|------------|-------------------------------|
 |user_id          |references  |null: false, foreign_key: true |
 |category_id      |references  |null: false, foreign_key: true |
-|bland_id         |references  |null: false, foreign_key: true |
+|brand_id         |references  |null: false, foreign_key: true |
 |price            |integer     |null: false                    |
 |name             |string      |null: false                    |
 |registration_date|string      |null: false                    |
@@ -102,7 +102,7 @@ belongs_to :user
 - has_many :comments
 - has_many :images
 - belongs_to :category
-- belongs_to  :bland
+- belongs_to :brand
 
 
 ## imagesテーブル
@@ -128,7 +128,7 @@ belongs_to :user
 - has_ancestry
 
 
-## blandsテーブル
+## brandsテーブル
 
 |Column          |Type        |Options                        |
 |----------------|------------|-------------------------------|
