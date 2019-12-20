@@ -1,0 +1,19 @@
+-# = render "products/header"
+
+-# = render "products/side"
+
+.profile
+  .profile-block
+    %h2.profile-title
+      プロフィール
+    .profile-profile
+      .profile-profile-icon_img
+        = image_tag("person.png",height:"40px", width:"40px")
+      -# .profile-profile-icon_name
+      %input.profile-profile-icon_name{:name => "nickname", :placeholder => "例)AYA☆セール中", :type => "text", :value => "おのっぴ"}/
+
+    .profile-profile-content
+      %textarea.profile-profile-content-text{:name => "introduction", :placeholder => "例）こんにちは☆ ご覧いただきありがとうございます！かわいいものやきれいめオフィスカジュアル中心に出品しています。服のサイズは主に9号です。気持ちよくお取引できるよう心がけていますので、商品や発送方法などご質問がありましたらお気軽にどうぞ♪"}
+      %button.profile-profile-content-btn{:type => "submit"} 変更する
+
+-# = render "products/footer"

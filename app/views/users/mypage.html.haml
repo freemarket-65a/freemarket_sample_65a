@@ -1,0 +1,47 @@
+.mypage
+  .mypage-profile
+    .mypage-profile-icon
+      = link_to image_tag("person.png",height:"60px", width:"60px")
+      .mypage-profile-name
+        おのっぴ
+        .mypage-profile-b
+          .mypage-profile-b-eva
+            評価 0
+          .mypage-profile-b-ex
+            出品数 0
+
+  .mypage-tab-n
+    .mypage-tab-n-left
+      = link_to "お知らせ", "#"
+    .mypage-tab-n-right
+      = link_to "やることリスト", "#"
+
+  .mypage-notice
+    .mypage-notice-logo
+      = image_tag("logo_red.svg",height:"40px", width:"40px")
+    .mypage-notice-text
+      = link_to "事務局からの個別メッセージ「ログイン通知」", "#"
+  .mypage-notice-content
+    .mypage-notice-content-link
+      = link_to "一覧を見る", "#"
+
+.mypage-tab-i-p
+  .mypage-tab-i-bp
+    購入した商品
+
+  .mypage-tab-i
+    .mypage-tab-i-left
+      = link_to "取引中", "#"
+    .mypage-tab-i-right
+      = link_to "過去の取引", "#"
+
+  .mypage-item
+    .mypage-item-logo
+      = image_tag("logo_gray.svg",height:"100px", width:"100px")
+    .mypage-item-text
+      取引中の商品がありません
+  -# .mypage-profile-content
+    -# .mypage-profile-content-link
+      -# = link_to "一覧を見る", "#"
+
+

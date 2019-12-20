@@ -1,0 +1,164 @@
+.mypage{
+  background-color: rgb(245, 245, 245);
+  width: 700px;
+  height: 485px;
+  margin: auto;
+}
+
+a{
+  color: #333;
+}
+
+.mypage-profile{
+  padding: 50px 16px 50px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  background:url(back.jpg);
+  background-size: cover;
+}
+
+.mypage-profile-name{
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.mypage-profile-b{
+  display: flex;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.mypage-profile-b-eva{
+  margin: 0px 8px 0px 8px;
+}
+
+.mypage-profile-b-ex{
+  margin: 0px 8px 0px 8px;
+  }
+
+.mypage-tab-n{
+  display: flex;
+  justify-content: center;
+  background-color: #ffffff;
+
+}
+
+.mypage-tab-n-left{
+  width: 350px;
+  height: 72px;
+  line-height: 72px;
+  text-align: center;
+  background-color: #ffffff;
+  font-weight: bold;
+  border-top: 2px solid #ea352d;
+}
+.mypage-tab-n-right{
+  width: 350px;
+  height: 72px;
+  line-height: 72px;
+  text-align: center;
+  background-color: #eee;
+  font-weight: bold;
+}
+
+.mypage-notice{
+  display: flex;
+  background-color: #ffffff;
+}
+
+.mypage-notice-logo{
+  height: 63px;
+  padding-top: 24px;
+  margin-left: 15px;
+  background-color: #ffffff;
+}
+
+.mypage-notice-text{
+  height: 72px;
+  line-height: 90px;
+  padding-left: 10px;
+  background-color: #ffffff;
+  font-size: 14px;
+}
+
+.mypage-notice-content{
+  background-color: #ffffff;
+  padding: 16px;
+  margin-top: 1px;
+}
+
+.mypage-notice-content-link{
+  display: block;
+  height: 56px;
+  margin: 0 auto;
+  margin-top: 1px;
+  color: #333;
+  line-height: 56px;
+  text-align: center;
+  background-color: #eee;
+  font-size: 14px;
+}
+.mypage-tab-i-p{
+  width: 700px;
+  line-height: 72px;
+  height: 72px;
+  margin: auto;
+  background: #fafafa;
+  font-size: 16px;
+}
+
+.mypage-tab-i-bp{
+  padding-left: 15px;
+  font-weight: bold;
+}
+
+.mypage-tab-i{
+  display: flex;
+  justify-content: center;
+  background-color: #ffffff;
+  // margin-top: 40px;
+}
+
+.mypage-tab-i-left{
+  width: 350px;
+  height: 72px;
+  line-height: 72px;
+  text-align: center;
+  background-color: #ffffff;
+  font-weight: bold;
+  border-top: 2px solid #ea352d;
+}
+.mypage-tab-i-right{
+  width: 350px;
+  height: 72px;
+  line-height: 72px;
+  text-align: center;
+  background-color: #eee;
+  font-weight: bold;
+}
+
+.mypage-item{
+  background-color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.mypage-item-logo{
+  height: 63px;
+  padding-top: 50px;
+  margin-left: 15px;
+  background-color: #ffffff;
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.mypage-item-text{
+  height: 72px;
+  line-height: 50px;
+  padding-left: 10px;
+  background-color: #ffffff;
+  text-align: center;
+  font-weight: bold;
+  color: #ccc;
+}

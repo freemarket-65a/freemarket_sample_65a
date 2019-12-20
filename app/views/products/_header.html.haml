@@ -1,8 +1,9 @@
 .header
   -#↓メルカリのロゴ
-  .header-logo 
-    %a{:href => "#"}
-      %img.header-logo-a{:src => "https://web-jp-assets.mercdn.net/_next/static/images/logo-acdd90ac4f472d5a6f7a330d33ab1225.svg"}/
+  .header-logo
+    = image_tag("fmarket_logo_red.svg",height:"40px", width:"100%")
+    -# %a{:href => "#"}
+      -# %img.header-logo-a{:src => "https://web-jp-assets.mercdn.net/_next/static/images/logo-acdd90ac4f472d5a6f7a330d33ab1225.svg"}/
   -# %form.header-logo-b{:action => "#"} ←何らかのアクション
   -#↓検索ボックス
   .header-search

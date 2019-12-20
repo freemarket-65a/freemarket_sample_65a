@@ -2,9 +2,8 @@
 
 .toppage-main
   .top-image
-    %ul.slider
-      %li
-        = image_tag("https://web-jp-assets.mercdn.net/_next/static/images/top-banner-camp-4f3fd88c685e8932d7dde2ad3a8336ba.jpg",height:"400px", width:"100%")
+    .slider
+      = image_tag("https://web-jp-assets.mercdn.net/_next/static/images/top-banner-camp-4f3fd88c685e8932d7dde2ad3a8336ba.jpg",height:"100%", width:"100%")
     -#   %li
     -#     = image_tag("products/top-banner-main.jpg", height:"400px", width:"100%")
     -# %div{id: "arrows"}
@@ -38,8 +37,9 @@
             .pickup-contents__header-more
               = link_to "もっと見る ＞", "#"
           .pickup-contents__image
-            = image_tag "tulip.jpg", class:"tulip" 
+            -# = image_tag "tulip.jpg", class:"tulip" 
             -# = render partial: 'product', collection: @ladiesproducts
+            = render 'product'
     .pickup-contents
       .pickup-content
         .pickup-content__img
@@ -52,8 +52,7 @@
             .pickup-contents__header-more
               = link_to "もっと見る ＞", "#"
           .pickup-contents__image
-            = image_tag "tulip.jpg", class:"tulip" 
-            -# = render partial: 'product', collection: @mensproducts
+            = render 'product'
     .pickup-contents
       .pickup-content
         .pickup-content__img
@@ -66,8 +65,7 @@
             .pickup-contents__header-more
               = link_to "もっと見る ＞", "#"
           .pickup-contents__image
-            = image_tag "tulip.jpg", class:"tulip" 
-            -# = render partial: 'product', collection: @appliancesproducts
+            = render 'product'
     .pickup-contents
       .pickup-content
         .pickup-content__img
@@ -80,10 +78,7 @@
             .pickup-contents__header-more
               = link_to "もっと見る ＞", "#"
           .pickup-contents__image
-            .pickup-contents__image2
-              = image_tag "tulip.jpg", class:"tulip" 
-            -# = render partial: 'product', collection: @toysproducts
+            = render 'product'
 
 = render 'footer'
 
--# = render 'side'

@@ -31,6 +31,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'mini_magick', '~> 4.8'
 
 gem 'haml-rails'
+gem 'erb2haml'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
