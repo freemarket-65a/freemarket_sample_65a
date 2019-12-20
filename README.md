@@ -30,7 +30,7 @@ Things you may want to cover:
 |nickname     |string     |null: false , add_index        |
 |email        |string     |null: false                    |
 |password     |string     |null: false                    |
-|famili_name  |string     |null: false                    |
+|family_name  |string     |null: false                    |
 |last_name    |string     |null: false                    |
 |birthday     |integer    |null: false                    |
 
@@ -38,6 +38,22 @@ Things you may want to cover:
 - has_many :comments
 - has_many :products
 - has_one  :pay
+- has_one  :address
+
+
+## addressesテーブル
+
+|Column       |Type       |Options                        |
+|-------------|-----------|-------------------------------|
+|user_id      |references |null: false, foreign_key: true |
+|postal       |integer    |null: false                    |
+|prefecture   |string     |null: false                    |
+|city         |string     |null: false                    |
+|address      |string     |null: false                    |
+|building     |integer    |                               |
+
+### Association
+belongs_to :user
 
 
 ## paysテーブル
@@ -76,6 +92,7 @@ Things you may want to cover:
 |category_id      |references  |null: false, foreign_key: true |
 |bland_id         |references  |null: false, foreign_key: true |
 |price            |integer     |null: false                    |
+|product_name     |string      |null: false                    |
 |registration_date|string      |null: false                    |
 |shipping_charges |string      |null: false                    |
 |shipping_area    |string      |null: false                    |
@@ -92,7 +109,7 @@ Things you may want to cover:
 
 |Column          |Type        |Options                        |
 |----------------|------------|-------------------------------|
-|products_id     |references  |null: false, foreign_key: true |
+|product_id      |references  |null: false, foreign_key: true |
 |image           |text        |null: false                    |
 
 ### Association
@@ -104,6 +121,7 @@ Things you may want to cover:
 |Column          |Type        |Options                        |
 |----------------|------------|-------------------------------|
 |ancestry        |string      |null: false                    |
+|name            |string      |null: false                    |
 
 ### Association
 - has_many :products
@@ -114,13 +132,7 @@ Things you may want to cover:
 
 |Column          |Type        |Options                        |
 |----------------|------------|-------------------------------|
-|blamd           |string      |null: false                    |
+|name            |string      |null: false                    |
 
 ### Association
 - has_many :products
-
-
-
-
-
-
