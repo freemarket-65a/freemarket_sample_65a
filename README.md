@@ -50,7 +50,7 @@ Things you may want to cover:
 |prefecture   |string     |null: false                    |
 |city         |string     |null: false                    |
 |address      |string     |null: false                    |
-|building     |integer    |                               |
+|building     |string     |                               |
 
 ### Association
 belongs_to :user
