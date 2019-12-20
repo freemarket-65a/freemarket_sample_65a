@@ -60,24 +60,13 @@ Things you may want to cover:
 
 |Column          |Type        |Options                        |
 |----------------|------------|-------------------------------|
+|user_id         |references  |null: false, foreign_key: true |
 |product_id      |references  |null: false, foreign_key: true |
 |comment         |text        |null: false                    |
 
 ### Association
 - belongs_to :user
 - belongs_to :product
-
-
-## users_commentsテーブル
-
-|Column          |Type        |Options                        |
-|----------------|------------|-------------------------------|
-|user_id         |references  |null: false, foreign_key: true |
-|comment_id      |references  |null: false, foreign_key: true |
-
-### Association
-- belongs_to :user
-- belongs_to :comment
 
 
 ## productsテーブル
@@ -96,8 +85,8 @@ Things you may want to cover:
 - belongs_to :user
 - has_many :comments
 - has_many :images
-- has_many :categories
-- has_one  :bland
+- belongs_to :categorie
+- belongs_to  :bland
 
 
 ## imagesテーブル
@@ -116,10 +105,11 @@ Things you may want to cover:
 |Column          |Type        |Options                        |
 |----------------|------------|-------------------------------|
 |path            |integer     |null: false                    |
-|category        |string      |null: false                    |
+|ancestry        |string      |null: false                    |
 
 ### Association
-- belongs_to :product
+- has_many :products
+- has_ancestry
 
 
 ## blandsテーブル
@@ -130,7 +120,7 @@ Things you may want to cover:
 |blamd           |string      |null: false                    |
 
 ### Association
-- belongs_to :product
+- has_many :products
 
 
 
