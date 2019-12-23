@@ -1,30 +1,27 @@
 .header
-  -#↓メルカリのロゴ
-  .header-logo
-    = image_tag("fmarket_logo_red.svg",height:"40px", width:"100%")
-    -# %a{:href => "#"}
-      -# %img.header-logo-a{:src => "https://web-jp-assets.mercdn.net/_next/static/images/logo-acdd90ac4f472d5a6f7a330d33ab1225.svg"}/
-  -# %form.header-logo-b{:action => "#"} ←何らかのアクション
-  -#↓検索ボックス
-  .header-search
-    %input.search-top-i{:name => "keyword", :placeholder => "何かお探しですか？", :type => "search", :value => ""}/
-    -#↓虫眼鏡ボタン
-    %button.search-top-b
-      %svg.search-top-s{"aria-hidden" => "true", :height => "20", :viewbox => "0 0 16 16", :width => "16"}
-        %path{:d => "M11.435 10.063h-.723l-.256-.247a5.92 5.92 0 0 0 1.437-3.87 5.946 5.946 0 1 0-5.947 5.947 5.92 5.92 0 0 0 3.87-1.437l.247.256v.723L14.637 16 16 14.637l-4.565-4.574zm-5.489 0A4.111 4.111 0 0 1 1.83 5.946 4.111 4.111 0 0 1 5.946 1.83a4.111 4.111 0 0 1 4.117 4.116 4.111 4.111 0 0 1-4.117 4.117z", :fill => "currentColor", "fill-rule" => "nonzero"}
+  .header-top
+    .header-logo
+      =link_to image_tag("fmarket_logo_red.svg",height:"40px", width:"100%")
+
+    .header-search
+      %input.search-top-i{:name => "keyword", :placeholder => "何かお探しですか？", :type => "search", :value => ""}
+
+      %button.search-top-b
+        %svg.search-top-s{"aria-hidden" => "true", :height => "20", :viewbox => "0 0 16 16", :width => "16"}
+          %path{:d => "M11.435 10.063h-.723l-.256-.247a5.92 5.92 0 0 0 1.437-3.87 5.946 5.946 0 1 0-5.947 5.947 5.92 5.92 0 0 0 3.87-1.437l.247.256v.723L14.637 16 16 14.637l-4.565-4.574zm-5.489 0A4.111 4.111 0 0 1 1.83 5.946 4.111 4.111 0 0 1 5.946 1.83a4.111 4.111 0 0 1 4.117 4.116 4.111 4.111 0 0 1-4.117 4.117z", :fill => "currentColor", "fill-rule" => "nonzero"}
 
   .header-bottom
     .header-bottom-left
-      -#↓カテゴリーから探す
       %a.header-bottom-left-a{:href => "#"}
+        %svg.header-bottom-left-aa{"aria-hidden" => "true", :height => "14", :viewbox => "0 0 20 16", :width => "20"}
+          %path{:d => "M18.799 15.25h-11.5a1.25 1.25 0 1 1 0-2.5h11.5a1.25 1.25 0 0 1 0 2.5zm0-6h-11.5a1.25 1.25 0 1 1 0-2.5h11.5a1.25 1.25 0 0 1 0 2.5zm0-6h-11.5a1.25 1.25 0 1 1 0-2.5h11.5a1.25 1.25 0 0 1 0 2.5zM2 16a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm0-6a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm0-6a2 2 0 1 0 0-4 2 2 0 0 0 0 4z", :fill => "currentColor", "fill-rule" => "nonzero"}
         カテゴリーから探す
-      -#↓ブランドから探す
       %a.header-bottom-left-b{:href => "#"}
+        = image_tag("tag.png",height:"15px", width:"15px")
         ブランドから探す
-    .header-bottom-raight
-      -#↓新規会員登録
+    .header-bottom-right
       %a.header-bottom-right-a{:href => "#"}
         新規会員登録
-      -#↓ログイン
       %a.header-bottom-right-b{:href => "#"}
         ログイン
+

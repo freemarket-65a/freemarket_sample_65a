@@ -1,10 +1,22 @@
+.pp{
+  margin-left: 40px;
+}
+
+.p-p{
+  margin: auto;
+}
+
+.p-page {
+  display: flex;
+  margin-left: 205px;
+  margin-top: 40px;
+}
+
 .profile{
   background-color: #ffffff;
   width: 700px;
   height: 568px;
   margin: auto;
-  // display: flex;
-  // justify-content: center;
 }
 
 .profile-title{
@@ -15,17 +27,12 @@
 }
 
 .profile-profile{
-  // background-color: #fccef6;
   display: flex;
   justify-content: center;
-  // padding: 0px 40px 0px 40px;
-  // height: 60px;
   padding: 72px 16px 24px;
-  // background: "tulip.jpg";
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
-  // font-size: 0;
   background:url(back.jpg);
   background-size: cover;
 }

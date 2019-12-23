@@ -1,37 +1,35 @@
 .l-side {
   width: 280px;  
 }
-
 .mypage-nav-list{
   list-style: none;
+  margin-top: 0;
+  padding-inline-start: 0;
 }
-
 a { 
   text-decoration: none; 
 }
-
 .mypage-nav-list-item {
-  // position: relative;
   display: block;
   min-height: 14px;
   padding: 16px;
   background: #fff;
   font-size: 14px;
   color: #333;
-  border-style: solid;
-  border: solid 1px #c9c9c9;
+  margin-top: 1px;
 }
-
 .mypage-nav-list-item-myp{
-  // position: relative;
   display: block;
   min-height: 14px;
   padding: 16px;
-  background: rgb(224, 224, 224);
+  background: #eee;
   font-size: 14px;
   color: #333;
-  border-style: solid;
-  border: solid 1px #c9c9c9;
   font-weight: bold;
 }
-
+.mypage-nav-head{
+  margin: 40px 0 0 0;
+  font-size: 16px;
+  font-weight: bold;
+  height: 24px;
+}

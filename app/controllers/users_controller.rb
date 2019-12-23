@@ -5,5 +5,8 @@ class UsersController < ApplicationController
 
   def mypage
   end
+
+  def credit
+  end
   
 end
