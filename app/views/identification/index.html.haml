@@ -1,0 +1,63 @@
+.identification
+
+  .header
+    = render '/header'
+
+  .main
+    
+    .side_bar
+      = render '/side_bar'
+    
+    .content
+      .title
+        本人情報の登録
+      .date
+        .date__footnote
+          お客さまの本人情報をご登録ください。
+          %br 登録されたお名前・生年月日を変更する場合、本人確認書類の提出が必要になります。
+        .date__upload
+          = link_to('本人確認書類のアップロードについて', {href: "#"})
+
+        .date__form
+          お名前
+        .date--must
+          楽天
+
+        .date__form
+          お名前カナ
+        .date--must
+          ラクテン
+
+        .date__form
+          生年月日
+        .date--must
+          2019/5/1
+
+        .date__form
+          郵便番号 (任意)
+        %input.date--any
+
+        .date__form
+          都道府県 (任意)
+        %input.date--any
+
+        .date__form
+          市区町村 (任意)
+        %input.date--any
+
+        .date__form
+          番地 (任意)
+        %input.date--any
+
+        .date__form
+          建物名 (任意)
+        %input.date--any
+
+        .date__button
+          = link_to('登録する', {href: "#"}, class: "date__button")
+
+        .date__registration
+          = link_to('本人情報の登録について', {href: "#"})
+
+  .footer
+    = render '/footer'
