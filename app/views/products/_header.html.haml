@@ -1,0 +1,22 @@
+.header
+  .header-top
+    .header-logo
+      =link_to image_tag("fmarket_logo_red.svg",height:"40px", width:"100%")
+
+    .header-search
+      %input.search-top-i{name: "keyword", placeholder: "何かお探しですか？", type: "search", value: ""}
+
+      %button.search-top-b
+        %svg.search-top-s{"aria-hidden": "true", height: "20", viewbox: "0 0 16 16", width: "16"}
+          %path{d: "M11.435 10.063h-.723l-.256-.247a5.92 5.92 0 0 0 1.437-3.87 5.946 5.946 0 1 0-5.947 5.947 5.92 5.92 0 0 0 3.87-1.437l.247.256v.723L14.637 16 16 14.637l-4.565-4.574zm-5.489 0A4.111 4.111 0 0 1 1.83 5.946 4.111 4.111 0 0 1 5.946 1.83a4.111 4.111 0 0 1 4.117 4.116 4.111 4.111 0 0 1-4.117 4.117z", fill: "currentColor", "fill-rule": "nonzero"}
+
+  .header-bottom
+    .header-bottom-left
+      = link_to image_tag("3line.png",height:"15px", width:"15px"), class: "header-bottom-left-a"
+      カテゴリーから探す
+      = link_to image_tag("tag.png",height:"15px", width:"15px"), class: "header-bottom-left-b"
+      ブランドから探す
+    .header-bottom-right
+      = link_to "新規会員登録","#", class: "header-bottom-right-a"
+      = link_to "ログイン", "#", class: "header-bottom-right-b"
+
