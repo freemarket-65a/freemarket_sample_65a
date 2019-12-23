@@ -1,28 +1,91 @@
-.single-main
-  %h2 住所入力
-  .single-main__inner
-    .single-main__inner--content
-      .text お名前 必須 
-      %input.login-input-text{name: "email", placeholder: "メールアドレス", type: "email", value: ""}/
-      %input.login-input-text{name: "email", placeholder: "メールアドレス", type: "email", value: ""}/
-      .text お名前カナ 必須
-      %input.login-input-text{name: "email", placeholder: "メールアドレス", type: "email", value: ""}/
-      %input.login-input-text{name: "email", placeholder: "メールアドレス", type: "email", value: ""}/
-      .text 郵便番号 必須
-      %input.login-input-text{name: "email", placeholder: "メールアドレス", type: "email", value: ""}/
-      .text 都道府県 必須
-      %input.login-input-text{name: "email", placeholder: "メールアドレス", type: "email", value: ""}/
-      .text 市区町村 必須
-      %input.login-input-text{name: "email", placeholder: "メールアドレス", type: "email", value: ""}/
-      .text 番地 必須
-      %input.login-input-text{name: "email", placeholder: "メールアドレス", type: "email", value: ""}/
-      .text 建物名 任意
-      %input.login-input-text{name: "email", placeholder: "メールアドレス", type: "email", value: ""}/
-      .text 電話 任意
-      %input.login-input-text{name: "email", placeholder: "メールアドレス", type: "email", value: ""}/
-
-      .text「次へ進む」のボタンを押すことにより、利用規約に同意したものとみなします
-
-      = link_to "次へ進む", "https://www.mercari.com/jp/signup/registration/", class: "btn btn-mail"
+.ex-main
+  .ex-main__inner
+    %h2 商品の情報を入力
+  .ex-main__inner
+    .ex-main__inner--content
+      .ex-center
+        .required-text 
+          出品画像
+          %span 必須 
+        .text
+          最大10枚までアップロードできます
+        %input.login-input-text{name: "email", placeholder: "メールアドレス", type: "email", value: ""}/
+  .ex-main__inner
+    .ex-main__inner--content
+      .ex-center
+        .required-text 
+          商品名
+          %span 必須 
+        .text
+        %input.login-input-text{name: "email", placeholder: "メールアドレス", type: "email", value: ""}/
+        .required-text 
+          商品の説明
+          %span 必須 
+        .text
+        %input.login-input-text{name: "email", placeholder: "メールアドレス", type: "email", value: ""}/
+      
+  .ex-main__inner
+    .ex-main__inner--content
+      .required-left
+        商品の詳細
+      .required-right
+        .required-text 
+          カテゴリー
+          %span 必須 
+        .text
+        %input.login-input-text{name: "email", placeholder: "メールアドレス", type: "email", value: ""}/     
+        .required-text 
+          商品の状態
+          %span 必須 
+        .text
+        %input.login-input-text{name: "email", placeholder: "メールアドレス", type: "email", value: ""}/
+        
+  .ex-main__inner
+    .ex-main__inner--content
+      .required-left
+        配送について
+      .required-right
+        .required-text 
+          配送料の負担
+          %span 必須
+        .text
+        %input.login-input-text{name: "email", placeholder: "メールアドレス", type: "email", value: ""}/     
+        .required-text 
+          発送元の地域
+          %span 必須 
+        .text
+        %input.login-input-text{name: "email", placeholder: "メールアドレス", type: "email", value: ""}/      
+        .required-text 
+          発送までの日数
+          %span 必須 
+        .text
+        %input.login-input-text{name: "email", placeholder: "メールアドレス", type: "email", value: ""}/
+      
+  .ex-main__inner
+    .ex-main__inner--content
+      .required-left
+        販売価格(300〜9,999,999)
+      .required-right
+        .required-text 
+          価格
+          %span 必須 
+        .text
+        %input.login-input-text{name: "email", placeholder: "メールアドレス", type: "email", value: ""}/     
+        .required-text 
+          販売手数料(100%)
+         
+        .text
+        %input.login-input-text{name: "email", placeholder: "メールアドレス", type: "email", value: ""}/
+        .required-text 
+          販売利益
+         
+        .text
+        %input.login-input-text{name: "email", placeholder: "メールアドレス", type: "email", value: ""}/
+        
+  .ex-main__inner
+    .ex-main__inner--content
+      .ex-center
+        = link_to "次へ進む", "https://www.mercari.com/jp/signup/registration/", class: "btn btn-mail"
+        = link_to "戻る", "https://www.mercari.com/jp/signup/registration/", class: "btn btn-mail"
 
 
