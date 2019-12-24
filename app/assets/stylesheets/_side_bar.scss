@@ -1,0 +1,36 @@
+.l-side {
+  width: 280px;
+  padding-bottom: 40px;
+}
+.mypage-nav-list{
+  list-style: none;
+  margin-top: 0;
+  padding-inline-start: 0;
+}
+a { 
+  text-decoration: none; 
+}
+.mypage-nav-list-item {
+  display: block;
+  min-height: 14px;
+  padding: 16px;
+  background: #fff;
+  font-size: 14px;
+  color: #333;
+  margin-top: 1px;
+}
+.mypage-nav-list-item-myp{
+  display: block;
+  min-height: 14px;
+  padding: 16px;
+  background: #eee;
+  font-size: 14px;
+  color: #333;
+  font-weight: bold;
+}
+.mypage-nav-head{
+  margin: 40px 0 0 0;
+  font-size: 16px;
+  font-weight: bold;
+  height: 24px;
+}
