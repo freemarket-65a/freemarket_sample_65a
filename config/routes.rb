@@ -1,6 +1,15 @@
 Rails.application.routes.draw do
-  # root to: 'users#profile' ←仮で画面確認のため、残しています。
-  # root to: 'users#mypage' ←仮で画面確認のため、残しています。
-  # root to: 'users#credit' ←仮で画面確認のため、残しています。
+  # ↓作成途中のため、仮で残しています。
+  # root to: 'users#profile'
+  # root to: 'users#mypage'
+  # root to: 'users#credit_p'
+  # root to: 'users#credit'
+
   root to: 'products#index'
+
+  # ↓作成途中のため、仮で残しています。
+  # resources :products
+
+  resources :users
+
 end
