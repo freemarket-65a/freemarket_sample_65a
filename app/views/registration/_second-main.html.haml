@@ -1,0 +1,21 @@
+.single-main
+  %h2 会員情報入力
+  .single-main__inner
+    .single-main__inner--content
+      .text ニックネーム 必須 
+      %input.login-input-text{name: "email", placeholder: "メールアドレス", type: "email", value: ""}/
+      .text メールアドレス 必須
+      %input.login-input-text{name: "email", placeholder: "メールアドレス", type: "email", value: ""}/
+      .text パスワード 必須
+      %input.login-input-text{name: "email", placeholder: "メールアドレス", type: "email", value: ""}/
+      .text お名前(全角) 必須
+      %input.login-input-text{name: "email", placeholder: "メールアドレス", type: "email", value: ""}/
+      .text お名前カナ(全角) 必須
+      %input.login-input-text{name: "email", placeholder: "メールアドレス", type: "email", value: ""}/
+      .text 生年月日 必須
+      %input.login-input-text{name: "email", placeholder: "メールアドレス", type: "email", value: ""}/
+
+      .text「次へ進む」のボタンを押すことにより、利用規約に同意したものとみなします
+
+      = link_to "次へ進む", "https://www.mercari.com/jp/signup/registration/", class: "btn btn-mail"
+     

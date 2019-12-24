@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   # ↓作成途中のため、仮で残しています。
   # root to: 'users#profile'
   # root to: 'users#mypage'
@@ -11,5 +12,6 @@ Rails.application.routes.draw do
   # resources :products
 
   resources :users
+  resources :details
 
 end
