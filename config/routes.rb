@@ -11,7 +11,13 @@ Rails.application.routes.draw do
   # ↓作成途中のため、仮で残しています。
   # resources :products
 
-  resources :users
+  resources :users do
+    member do
+      get 'mypage'
+      get 'profile'
+      get 'credit'
+    end
+  end
   resources :details
 
 end
