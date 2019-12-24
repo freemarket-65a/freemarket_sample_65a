@@ -1,12 +1,6 @@
 class UsersController < ApplicationController
 
-  def profile
+  def show
   end
 
-  def mypage
-  end
-
-  def credit
-  end
-  
 end

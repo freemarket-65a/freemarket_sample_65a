@@ -1,30 +1,32 @@
+= render "products/header"
+
 .c-p
   .c-page
     .side_bar
       = render "products/side_bar"
 
-    .cp
-      -# ↓作成中のため、コメントアウトにしてあります。
-      
-      -# %section.l-chapter-container
-      -#   %h2.l-chapter-head 支払い方法
-      -#   .l-single-inner
-      -#     %section
-      -#       .l-single-content
-      -#         %h3.l-chapter-sub-head クレジットカード一覧
-      -#       %ul.settings-payment-list
-      -#         %li
-      -#           %form.l-single-content{action: "https://www.mercari.com/jp/mypage/card/delete/", method: "POST"}
-      -#             %figure
-      -#               %img{alt: "visa", height: "15", src: "//www-mercari-jp.akamaized.net/assets/img/card/visa.svg?1714804574", width: "49"}/
-      -#             %input{name: "__csrf_value", type: "hidden", value: "ce6f33565c79a54cc5249e06fcb55262d9cedce83a380314797b14cc38ebb4bdc224eae49f203f5f1760a06bb141a45065c17f02f549955bfcc118b40e219e256"}/
-      -#             %input{name: "card_sequence_no", type: "hidden", value: "yZGkLMepc2AKgz9BbJZF4Rcc"}/
-      -#             .settings-payment-num ************4321
-      -#             .settings-payment-num 12 / 20
-      -#             %input{name: "method", type: "hidden", value: "card"}/
-      -#             %button.settings-payment-remove{type: "submit"}
-      -#               削除する
-      -#     .settings-not-regist
-      -#       %a{href: "/jp/help_center/category/6/", target: "_blank"}
-      -#         %span 支払い方法について
-      -#         %i.icon-arrow-right
+    .cp      
+      .cp-pay
+        支払い方法
+      .cp-info
+        .cp-chapter 
+          クレジットカード一覧
+        .cp-payment-tag
+        
+          -# ↓編集中のため、仮で残しています。
+          -# .cp-payment-tag-c
+          -#   = link_to "", "#"
+          -#     = image_tag("card.png",height:"25px", width:"25px", class: "cp-payment-tag-cv")
+          -#     .cp-payment-tag-add
+          -#       クレジットカードを追加する
+
+          .cp-payment-tag-c
+            =link_to image_tag("card.png",height:"25px", width:"25px", class: "cp-payment-tag-cv")
+            .cp-payment-tag-add
+              クレジットカードを追加する
+
+        .cp-regist
+          = link_to "支払い方法について ＞", "#", class: "cp-regist-p"
+          %i.icon-arrow-right
+
+= render "products/footer"
