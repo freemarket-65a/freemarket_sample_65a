@@ -1,0 +1,52 @@
+.pur-main{
+  background: #fff;
+  width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  h2{
+    font-size: 22px;
+    padding: 32px;
+  }
+  &__inner{
+    padding: 24px 16px 40px;
+    border-top: 1px solid #f5f5f5;
+    padding: 40px;
+    max-width: 343px;
+    margin: 0 auto;
+
+    &--content{
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+    }
+    &--text{
+
+    }
+  }
+}
+
+.purchase-image{
+  width: 70px;
+  // background-color: red;
+  color: white;
+  
+}
+.purchase-text{
+  span{
+    background-color: red;
+    color: white;
+  }
+}
+
+.pur-center{
+  margin: 0 auto;
+}
+
+.required-left{
+  width: 100px;
+  text-align: left;
+}
+
+.required-right{
+  width: 200px;
+}
