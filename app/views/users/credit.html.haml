@@ -1,0 +1,32 @@
+= render "products/header"
+
+.c-p
+  .c-page
+    .side_bar
+      = render "products/side_bar"
+
+    .cp      
+      .cp-pay
+        支払い方法
+      .cp-info
+        .cp-chapter 
+          クレジットカード一覧
+        .cp-payment-tag
+        
+          -# ↓編集中のため、仮で残しています。
+          -# .cp-payment-tag-c
+          -#   = link_to "", "#"
+          -#     = image_tag("card.png",height:"25px", width:"25px", class: "cp-payment-tag-cv")
+          -#     .cp-payment-tag-add
+          -#       クレジットカードを追加する
+
+          .cp-payment-tag-c
+            =link_to image_tag("card.png",height:"25px", width:"25px", class: "cp-payment-tag-cv")
+            .cp-payment-tag-add
+              クレジットカードを追加する
+
+        .cp-regist
+          = link_to "支払い方法について ＞", "#", class: "cp-regist-p"
+          %i.icon-arrow-right
+
+= render "products/footer"

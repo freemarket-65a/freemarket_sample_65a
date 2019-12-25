@@ -1,4 +1,16 @@
+@import "./base/reset";
+@import "./base/base";
+@import "./base/registration-base";
+
+@import "./credit";
+@import "./details";
+@import "./footer";
+@import "./header";
+@import "./logout";
+@import "./mypage";
+@import "./products";
+@import "./profile";
 @import "./registration";
+
 @import "./login";
-@import "./base/registration-base.scss";
-@import "./base/base.scss";
+@import "./side_bar";
