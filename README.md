@@ -22,7 +22,6 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
-
 ## usersテーブル
 
 |Column       |Type       |Options                        |
@@ -30,16 +29,30 @@ Things you may want to cover:
 |nickname     |string     |null: false , add_index        |
 |email        |string     |null: false                    |
 |password     |string     |null: false                    |
-|famili_name  |string     |null: false                    |
+|family_name  |string     |null: false                    |
 |last_name    |string     |null: false                    |
 |birthday     |integer    |null: false                    |
-|products_id  |references |null: false, foreign_key: true |
 
 ### Association
-- has_many :users_comments
-- has_many :comments,  through:  :users_comments
+- has_many :comments
 - has_many :products
-- has_one  :pay
+- has_one  :pay, dependent: destroy
+- has_one  :address, dependent: destroy
+
+
+## addressesテーブル
+
+|Column       |Type       |Options                        |
+|-------------|-----------|-------------------------------|
+|user_id      |references |null: false, foreign_key: true |
+|postal       |integer    |null: false                    |
+|prefecture   |string     |null: false                    |
+|city         |string     |null: false                    |
+|address      |string     |null: false                    |
+|building     |string     |                               |
+
+### Association
+belongs_to :user
 
 
 ## paysテーブル
@@ -61,25 +74,13 @@ Things you may want to cover:
 
 |Column          |Type        |Options                        |
 |----------------|------------|-------------------------------|
+|user_id         |references  |null: false, foreign_key: true |
 |product_id      |references  |null: false, foreign_key: true |
 |comment         |text        |null: false                    |
 
 ### Association
-- has_many :users_comments
-- has_many :users,  through:  :users_comments
-- belongs_to :product
-
-
-## users_commentsテーブル
-
-|Column          |Type        |Options                        |
-|----------------|------------|-------------------------------|
-|user_id         |references  |null: false, foreign_key: true |
-|comment_id      |references  |null: false, foreign_key: true |
-
-### Association
 - belongs_to :user
-- belongs_to :comment
+- belongs_to :product
 
 
 ## productsテーブル
@@ -88,8 +89,9 @@ Things you may want to cover:
 |-----------------|------------|-------------------------------|
 |user_id          |references  |null: false, foreign_key: true |
 |category_id      |references  |null: false, foreign_key: true |
-|bland_id         |references  |null: false, foreign_key: true |
+|brand_id         |references  |null: false, foreign_key: true |
 |price            |integer     |null: false                    |
+|name             |string      |null: false                    |
 |registration_date|string      |null: false                    |
 |shipping_charges |string      |null: false                    |
 |shipping_area    |string      |null: false                    |
@@ -98,15 +100,15 @@ Things you may want to cover:
 - belongs_to :user
 - has_many :comments
 - has_many :images
-- has_many :categories
-- has_one  :bland
+- belongs_to :category
+- belongs_to :brand
 
 
 ## imagesテーブル
 
 |Column          |Type        |Options                        |
 |----------------|------------|-------------------------------|
-|products_id     |references  |null: false, foreign_key: true |
+|product_id      |references  |null: false, foreign_key: true |
 |image           |text        |null: false                    |
 
 ### Association
@@ -117,25 +119,19 @@ Things you may want to cover:
 
 |Column          |Type        |Options                        |
 |----------------|------------|-------------------------------|
-|path            |integer     |null: false                    |
-|category        |string      |null: false                    |
+|ancestry        |string      |null: false                    |
+|name            |string      |null: false                    |
 
 ### Association
-- belongs_to :product
+- has_many :products
+- has_ancestry
 
 
-## blandsテーブル
+## brandsテーブル
 
 |Column          |Type        |Options                        |
 |----------------|------------|-------------------------------|
-|path            |integer     |null: false                    |
-|blamd           |string      |null: false                    |
+|name            |string      |null: false                    |
 
 ### Association
-- belongs_to :product
-
-
-
-
-
-
+- has_many :products
