@@ -2,15 +2,13 @@
   background: #fff;
   max-width: 456px;
   margin: 0 auto;
-  
   &__top{
     padding: 24px 32px;
     max-width: 392px;
     margin: 0 auto;
-    // p{
-
-    //   padding: 32px;
-    // }
+    &--btn{
+      margin-top: 8px;
+    }
   }
   &__inner{
     padding: 24px 32px;
@@ -27,8 +25,9 @@
     &--form{
       
       // width: 392px;
-      margin: 0 auto;
-      #login-form{
+      margin: 50px auto;
+      .login-form{
+        margin-bottom: 20px;
         display: block;
         width: 360px;
       }
@@ -39,4 +38,5 @@
 
 .text{
   display: block;
+
 }

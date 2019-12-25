@@ -8,15 +8,22 @@
   transition: all ease-out .3s;
   cursor: pointer;
   text-align: center;
+  text-decoration: none;
 }
 .btn-mail{
   background-color: red;
+  color: white;
 }
 .btn-facebook{
-  background-color: blue;
+  background-color: #385185;
+  color: white;
 }
 .btn-google{
   border: solid 1px;
+}
+.btn-login{
+  background-color: red;
+  color: white;
 }
 
 .btn-new{
