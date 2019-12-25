@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   root to: 'products#index'
+  # resources :products
 
   resources :users do
     member do
@@ -11,5 +12,6 @@ Rails.application.routes.draw do
     end
   end
   resources :details
+  resources :registration
 
 end
