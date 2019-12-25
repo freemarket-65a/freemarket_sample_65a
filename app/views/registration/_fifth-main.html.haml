@@ -5,18 +5,17 @@
       .required-text 
         カード番号
         %span 必須 
-      %input.single-form.login-input-text{:name => "email", :placeholder => "半角英数字のみ", :type => "text", :value => ""}/
+      %input.single-form.login-input-text{name: "email", placeholder: "半角英数字のみ", type: "text", value: ""}/
       .required-text 
         有効期限
         %span 必須 
-      %input.credit-form.login-input-text{:name => "email", :placeholder => "", :type => "text", :value => ""}/ 
+      %input.credit-form.login-input-text{name: "email", placeholder: "", type: "text", value: ""}/ 
       月
-      %input.credit-form.login-input-text{:name => "email", :placeholder => "", :type => "email", :value => ""}/
+      %input.credit-form.login-input-text{name: "email", placeholder: "", type: "email", value: ""}/
       年
       .required-text 
         セキュリティコード
         %span 必須 
-      %input.single-form.login-input-text{:name => "email", :placeholder => "カード背面4桁もしくは3桁の番号", :type => "email", :value => ""}/
+      %input.single-form.login-input-text{name: "email", placeholder: "カード背面4桁もしくは3桁の番号", type: "email", value: ""}/
 
-      %a.btn.btn-mail{ :href => "https://www.mercari.com/jp/signup/registration/"}次へ進む
-      
+      = link_to "次へ進む", "https://www.mercari.com/jp/signup/registration/", class: "btn btn-mail"
