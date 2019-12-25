@@ -1,0 +1,43 @@
+.single-main
+  %h2 住所入力
+  .single-main__inner
+    .single-main__inner--content
+      .required-text 
+        お名前
+        %span 必須 
+      %input.single-form{name: "email", placeholder: "例)山田", type: "email", value: ""}/
+      %input.single-form{name: "email", placeholder: "例)彩", type: "email", value: ""}/
+      .required-text 
+        お名前カナ
+        %span 必須
+      %input.single-form{name: "email", placeholder: "例)ヤマダ", type: "email", value: ""}/
+      %input.single-form{name: "email", placeholder: "例)アヤ", type: "email", value: ""}/
+      .required-text 
+        郵便番号
+        %span 必須
+      %input.single-form{name: "email", placeholder: "例)123−4567", type: "email", value: ""}/
+      .required-text 
+        都道府県
+        %span 必須
+      %input.single-form{name: "email", placeholder: "例)北海道", type: "email", value: ""}/
+      .required-text 
+        市区町村
+        %span 必須
+      %input.single-form{name: "email", placeholder: "例)横浜市緑区", type: "email", value: ""}/
+      .required-text 
+        番地
+        %span 必須
+      %input.single-form{name: "email", placeholder: "例)青山1−1−1", type: "email", value: ""}/
+      .any-text 
+        建物名
+        %span 任意
+      %input.single-form{name: "email", placeholder: "例)TECHビル103", type: "email", value: ""}/
+      .any-text 
+        電話 
+        %span 任意
+      %input.single-form{name: "email", placeholder: "例)09037641016", type: "email", value: ""}/
+
+      = link_to "次へ進む", "https://www.mercari.com/jp/signup/registration/", class: "btn btn-mail"
+
+
+
