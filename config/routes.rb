@@ -7,6 +7,7 @@ Rails.application.routes.draw do
       get 'mypage'
       get 'profile'
       get 'credit'
+      get 'logout'
     end
   end
   resources :details

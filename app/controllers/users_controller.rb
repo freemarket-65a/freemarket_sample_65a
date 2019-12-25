@@ -9,4 +9,7 @@ class UsersController < ApplicationController
   def credit
   end
 
+  def logout
+  end
+
 end

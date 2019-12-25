@@ -13,11 +13,12 @@ a {
 .mypage-nav-list-item {
   display: block;
   min-height: 14px;
-  padding: 16px;
+  padding: 16px 0 16px 20px;
   background: #fff;
   font-size: 14px;
   color: #333;
   margin-top: 1px;
+  text-align: left;
 }
 .mypage-nav-list-item-myp{
   display: block;
@@ -29,8 +30,9 @@ a {
   font-weight: bold;
 }
 .mypage-nav-head{
-  margin: 40px 0 0 0;
+  margin: 40px 0 2px 0;
   font-size: 16px;
   font-weight: bold;
   height: 24px;
+  text-align: left;
 }
