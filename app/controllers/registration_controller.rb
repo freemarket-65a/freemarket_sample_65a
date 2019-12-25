@@ -16,4 +16,7 @@ class RegistrationController < ApplicationController
 
   def complete
   end
+
+  def show
+  end
 end
