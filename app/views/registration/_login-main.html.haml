@@ -1,7 +1,8 @@
 .login-main
   .login-main__top
     .text アカウントをお持ちでない方はこちら
-    %a.login-main__top--btn.btn.btn-new{ :href => "https://www.mercari.com/jp/signup/registration/"}新規会員登録
+    = link_to "新規会員登録", "https://www.mercari.com/jp/signup/registration/", class: "login-main__top--btn btn btn-new"
+
   .login-main__inner
     .login-main__inner--content
       
@@ -9,9 +10,7 @@
       %button#google-login.btn.btn-google Googleでログイン
 
     .login-main__inner--form
-      %input.login-form.input-default{:name => "email", :placeholder => "メールアドレス", :type => "email", :value => ""}/
-      %input.login-form.input-default{:name => "email", :placeholder => "パスワード", :type => "text", :value => ""}/
+      %input.login-form.input-default{name: "email", placeholder: "メールアドレス", type: "email", value: ""}/
+      %input.login-form.input-default{name: "email", placeholder: "パスワード", type: "text", value: ""}/
 
-      %a.btn.btn-login{ :href => "https://www.mercari.com/jp/signup/registration/"}ログイン
-
-
+      = link_to "ログイン", "https://www.mercari.com/jp/signup/registration/", class: "btn btn-login"
