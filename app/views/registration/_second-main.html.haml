@@ -2,20 +2,22 @@
   %h2 会員情報入力
   .single-main__inner
     .single-main__inner--content
-      .text ニックネーム 必須 
-      %input.login-input-text{name: "email", placeholder: "メールアドレス", type: "email", value: ""}/
-      .text メールアドレス 必須
-      %input.login-input-text{name: "email", placeholder: "メールアドレス", type: "email", value: ""}/
-      .text パスワード 必須
-      %input.login-input-text{name: "email", placeholder: "メールアドレス", type: "email", value: ""}/
-      .text お名前(全角) 必須
-      %input.login-input-text{name: "email", placeholder: "メールアドレス", type: "email", value: ""}/
-      .text お名前カナ(全角) 必須
-      %input.login-input-text{name: "email", placeholder: "メールアドレス", type: "email", value: ""}/
-      .text 生年月日 必須
-      %input.login-input-text{name: "email", placeholder: "メールアドレス", type: "email", value: ""}/
+      .required-text 
+        ニックネーム
+        %span 必須 
+      %input.single-form.login-input-text{name: "email", placeholder: "例)フリマ太郎", type: "email", value: ""}/
+      .required-text 
+        メールアドレス
+        %span 必須
+      %input.single-form.login-input-text{name: "email", placeholder: "PC・携帯どちらでも可", type: "email", value: ""}/
+      .required-text 
+        パスワード
+        %span 必須
+      %input.single-form.login-input-text{name: "email", placeholder: "６文字以上", type: "email", value: ""}/
+      .required-text 
+        パスワード（確認)
+        %span 必須
+      %input.single-form.login-input-text{name: "email", placeholder: "６文字以上", type: "email", value: ""}/
+    
+      = link_to "次へ進む", "/registration/:id/telephone", class: "btn btn-mail"
 
-      .text「次へ進む」のボタンを押すことにより、利用規約に同意したものとみなします
-
-      = link_to "次へ進む", "https://www.mercari.com/jp/signup/registration/", class: "btn btn-mail"
-     

@@ -1,4 +1,7 @@
 class DetailsController < ApplicationController
-  def details
+  def index
+  end
+
+  def show
   end
 end
