@@ -33,4 +33,6 @@ Rails.application.routes.draw do
   
   resources :exhibit, only: [:index, :show]
 
+  resources :purchase, only: [:index, :show]
+
 end
