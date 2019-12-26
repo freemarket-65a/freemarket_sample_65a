@@ -1,10 +1,14 @@
 @import "./base/reset";
 @import "./base/base";
 @import "./base/registration-base";
+@import "./base/single-base.scss";
 
 @import "./user";
 @import "./credit";
 @import "./details";
+@import "./exhibit";
+
+
 @import "./footer";
 @import "./header";
 @import "./logout";
@@ -15,3 +19,4 @@
 
 @import "./login";
 @import "./side_bar";
+
