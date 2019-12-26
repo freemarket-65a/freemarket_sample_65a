@@ -1,23 +1,17 @@
-.contents_row
-  .container
-    Log in
+= render "shared/single-header"
 
-  = form_with model: @user, url: user_session_path, id: 'new_user', class: 'new_user', local: true do |f|
-    .field
-      = f.label :email
-      %br
-        = f.email_field :email, autofocus: true
+.login-main
+  .login-main__top
+    .text アカウントをお持ちでない方はこちら
+    = link_to "新規会員登録", "/users/sign_up", class: "login-main__top--btn btn btn-new"
+  
+  .login-main__inner
+    .login-main__inner--form
+      = form_with model: @user, url: user_session_path, id: 'new_user', class: 'new_user', local: true do |f|
+        = f.email_field :email, autofocus: true, class: "login-form input-default", placeholder: "メールアドレス"
 
-    .field
-      = f.label :password
-      %br
-      = f.password_field :password, autocomplete: "off"
+        = f.password_field :password, autocomplete: "off", class: "login-form input-default", placeholder: "パスワード"
 
-    - if devise_mapping.rememberable?
-      .field
-        = f.label :remember_me
-        %br
-        = f.check_box :remember_me
+        = f.submit "ログイン", class: "btn btn-mail"
 
-    .actions
-      = f.submit "Log in"
+= render "shared/single-footer"

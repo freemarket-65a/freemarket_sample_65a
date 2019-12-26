@@ -1,5 +1,6 @@
 @import "./base/reset";
 @import "./base/base";
+@import "./base/registration-base";
 
 @import "./header";
 @import "./products";
@@ -8,4 +9,5 @@
 @import "./mypage";
 @import "./profile";
 @import "./user";
-@import "./devise";
+@import "./registration";
+@import "./login";
