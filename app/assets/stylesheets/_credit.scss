@@ -4,8 +4,9 @@
 
 .c-page {
   display: flex;
-  margin-left: 205px;
-  padding-top: 40px;
+  margin: 40px auto 0;
+  padding-bottom: 40px;
+  width: 1020px;
 }
 
 .cp{
@@ -30,7 +31,7 @@
 }
 
 .cp-chapter{
-  margin-left: -204px;
+  margin-left: -194px;
   font-weight: bold;
 }
 
@@ -44,13 +45,13 @@
   display: flex;
   width: 350px;
   background: #ea352d;
-  margin-left: 80px;
+  margin-left: 66px;
   height: 45px;
 }
 
 .cp-payment-tag-cv{
-  padding-left: 50px;
-  padding-top: 10px;
+  margin-top: 11px;
+  margin-left: 49px;
 }
 
 .cp-payment-tag-v{

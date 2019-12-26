@@ -1,0 +1,70 @@
+.identification
+
+  .header
+    = render "products/header"
+
+  .main
+    
+    .side_bar
+      = render 'products/side_bar'
+    
+    .content
+      .title
+        本人情報の登録
+      .date
+        .date__footnote
+          お客さまの本人情報をご登録ください。
+          %br 登録されたお名前・生年月日を変更する場合、本人確認書類の提出が必要になります。
+        .date__upload
+          = link_to "本人確認書類のアップロードについて ＞", "#", class: "date__upload--i"
+
+        .date__form
+          お名前
+
+        .date--must
+          楽天 太郎
+
+        .date__form
+          お名前カナ
+
+        .date--must
+          ラクテン タロウ
+
+        .date__form
+          生年月日
+        .date--must
+          1998/05/01
+
+        .date__form
+          郵便番号
+          %span.date--arbitrary 任意
+        %input.date--any{name: "postcode", placeholder: "例）1234567", type: "text"}/
+
+        .date__form
+          都道府県
+          %span.date--arbitrary 任意
+        %input.date--any{value: "--"}/
+
+        .date__form
+          市区町村
+          %span.date--arbitrary 任意
+        %input.date--any{name: "city", placeholder: "例）横浜市緑区", type: "text"}/
+
+        .date__form
+          番地
+          %span.date--arbitrary 任意
+        %input.date--any{name: "block", placeholder: "例）青山1-1-1", type: "text"}/
+
+        .date__form
+          建物名
+          %span.date--arbitrary 任意
+        %input.date--any{name: "house", placeholder: "例）桜ビル103", type: "text"}/
+
+        .date__button
+          = link_to "登録する", "#", class: "date__button"
+
+        .date__registration
+          = link_to "本人情報の登録について ＞", "#", class: "date__registration--i"
+
+  .footer
+    = render 'products/footer'

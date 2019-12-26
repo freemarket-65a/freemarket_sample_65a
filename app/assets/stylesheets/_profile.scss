@@ -8,8 +8,9 @@
 
 .p-page {
   display: flex;
-  margin-left: 205px;
-  margin-top: 40px;
+  margin: 40px auto 0;
+  padding-bottom: 40px;
+  width: 1020px;
 }
 
 .profile{
@@ -55,7 +56,6 @@
   min-height: 216px;display: block;
   width: 90%;
   max-width: 100%;
-  // padding: 10px;
   border: 1px solid #ccc;
   background: #fff;
   font-size: 16px;
@@ -67,16 +67,16 @@
 
 .profile-profile-content-btn{
   display: block;
-    width: 91%;
-    line-height: 48px;
-    font-size: 14px;
-    border: 1px solid transparent;
-    -webkit-transition: all ease-out .3s;
-    transition: all ease-out .3s;
-    cursor: pointer;
-    text-align: center;
-    background: #ea352d;
-    border: 1px solid #ea352d;
-    color: #fff;
-    margin: auto;
+  width: 91%;
+  line-height: 48px;
+  font-size: 14px;
+  border: 1px solid transparent;
+  -webkit-transition: all ease-out .3s;
+  transition: all ease-out .3s;
+  cursor: pointer;
+  text-align: center;
+  background: #ea352d;
+  border: 1px solid #ea352d;
+  color: #fff;
+  margin: auto;
 }

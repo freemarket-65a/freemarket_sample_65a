@@ -14,7 +14,7 @@
         = link_to "いいね！一覧", "#", class: "mypage-nav-list-item"
         %i.icon-arrow-right
       %li
-        = link_to "出品する", "#", class: "mypage-nav-list-item"
+        = link_to "出品する", exhibit_path, class: "mypage-nav-list-item"
         %i.icon-arrow-right
       %li
         = link_to "出品した商品 - 出品中", "#", class: "mypage-nav-list-item"
@@ -54,23 +54,23 @@
     %h3.mypage-nav-head 設定
     %ul.mypage-nav-list
       %li
-        = link_to "プロフィール", "/users/:id/profile", class: "mypage-nav-list-item"
+        = link_to "プロフィール", profile_user_path, class: "mypage-nav-list-item"
         %i.icon-arrow-right
       %li
         = link_to "発送元・お届け先住所変更", "#", class: "mypage-nav-list-item"
         %i.icon-arrow-right
       %li
-        = link_to "支払い方法", "/users/:id/credit", class: "mypage-nav-list-item"
+        = link_to "支払い方法", credit_user_path, class: "mypage-nav-list-item"
         %i.icon-arrow-right
       %li
         = link_to "メール/パスワード", "#", class: "mypage-nav-list-item"
         %i.icon-arrow-right
       %li
-        = link_to "本人情報", "#", class: "mypage-nav-list-item"
+        = link_to "本人情報", identification_user_path, class: "mypage-nav-list-item"
         %i.icon-arrow-right
       %li
         = link_to "電話番号の確認", "#", class: "mypage-nav-list-item"
         %i.icon-arrow-right
       %li
-        = link_to "ログアウト", "/users/:id/logout", class: "mypage-nav-list-item"
+        = link_to "ログアウト", logout_user_path, class: "mypage-nav-list-item"
         %i.icon-arrow-right

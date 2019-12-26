@@ -26,10 +26,15 @@
 }
 
 .required-text{
+  text-align: left;
   span{
-    background-color: red;
+    background-color: #ea352d;
     color: white;
   }
+}
+
+.text{
+  text-align: left;  
 }
 
 .required-left{
