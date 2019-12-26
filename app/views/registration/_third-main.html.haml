@@ -3,9 +3,9 @@
   .single-main__inner
     .single-main__inner--content
       .text 携帯電話の番号
-      %input.login-input-text{name: "email", placeholder: "メールアドレス", type: "email", value: ""}/
+
+      %input.single-form{name: "email", placeholder: "携帯電話の番号を入力", type: "text", value: ""}/
       
-      .text 本人確認のため、携帯電話のSMS(ショートメッセージサービス)を利用します。他のユーザーに公開されることはありません。
+      = link_to "次へ進む", "/registration/:id/address", class: "btn btn-mail"
 
-      = link_to "SMSを送信する", "https://www.mercari.com/jp/signup/registration/", class: "btn btn-mail"
-
+      .text ※携帯電話は他のユーザーに公開されることはありません。

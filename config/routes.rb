@@ -1,4 +1,35 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  root to:'exhibit#show'
+  
+  devise_for :users
+  # root to: 'users#profile' ←仮で画面確認のため、残しています。
+  # root to: 'users#mypage' ←仮で画面確認のため、残しています。
+  # root to: 'users#credit' ←仮で画面確認のため、残しています。
+
+  root to: 'products#index'
+
+  resources :products, only: [:index]
+  
+  resources :users do
+    member do
+      get 'mypage'
+      get 'profile'
+      get 'credit'
+      get 'logout'
+    end
+  end
+
+  resources :registration, only: [:index, :new] do
+    member do
+      get 'address'
+      get 'complete'
+      get 'login'
+      get 'member'
+      get 'payment'
+      get 'telephone'
+    end
+  end
+  resources :details, only: [:index]
+  
+  resources :exhibit, only: [:index, :show]
+
 end
