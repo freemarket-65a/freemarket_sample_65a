@@ -2,10 +2,11 @@
   background: #fff;
   width: 700px;
   margin: 0 auto;
-  text-align: center;
   h2{
     font-size: 22px;
-    padding: 32px;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
   }
   &__inner{
     padding: 24px 16px 40px;
@@ -20,15 +21,17 @@
       justify-content: space-between;
     }
     &--text{
+      margin-top: 10px;
 
     }
   }
 }
 
 .purchase-image{
-  width: 70px;
+  width: 80px;
   // background-color: red;
   color: white;
+  margin-right: 10px;
   
 }
 .purchase-text{
@@ -42,11 +45,13 @@
   margin: 0 auto;
 }
 
-.required-left{
+.pur-left{
   width: 100px;
-  text-align: left;
+  font-weight: bold;
 }
 
-.required-right{
+.pur-right{
   width: 200px;
+  text-align: right;
+
 }
