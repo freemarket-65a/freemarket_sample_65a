@@ -16,7 +16,7 @@
           お客さまの本人情報をご登録ください。
           %br 登録されたお名前・生年月日を変更する場合、本人確認書類の提出が必要になります。
         .date__upload
-          = link_to "本人確認書類のアップロードについて ＞", {href: "#"}, class: "date__upload--i"
+          = link_to "本人確認書類のアップロードについて ＞", "#", class: "date__upload--i"
 
         .date__form
           お名前
@@ -61,10 +61,10 @@
         %input.date--any{name: "house", placeholder: "例）桜ビル103", type: "text"}/
 
         .date__button
-          = link_to('登録する', {href: "#"}, class: "date__button")
+          = link_to('登録する', "#", class: "date__button")
 
         .date__registration
-          = link_to"本人情報の登録について ＞", {href: "#"}, class: "date__registration--i"
+          = link_to"本人情報の登録について ＞", "#", class: "date__registration--i"
 
   .footer
     = render 'products/footer'
