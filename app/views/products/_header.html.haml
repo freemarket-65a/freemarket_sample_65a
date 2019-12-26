@@ -1,7 +1,7 @@
 .header
   .header-top
     .header-logo
-      =link_to image_tag("fmarket_logo_red.svg",height:"40px", width:"100%")
+      =link_to image_tag("fmarket_logo_red.svg",height:"40px", width:"100%"), root_path
 
     .header-search
       %input.search-top-i{name: "keyword", placeholder: "何かお探しですか？", type: "search", value: ""}
@@ -16,6 +16,7 @@
       カテゴリーから探す
       = link_to image_tag("tag.png",height:"15px", width:"15px"), class: "header-bottom-left-b"
       ブランドから探す
+
     .header-bottom-right
       - if user_signed_in?
         = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'header-bottom-right-a'
@@ -23,3 +24,15 @@
       - else
         = link_to "新規登録", new_user_registration_path, class: 'header-bottom-right-a'
         = link_to "ログイン", new_user_session_path, class: 'header-bottom-right-b'
+
+    -# ↓ログイン時、ログアウト時の切り替えに必要なため、記載（とりあえず、コメントアウト中）
+    -# .header-bottom-right_n
+    -#   = link_to "新規会員登録","/registration/new", class: "header-bottom-right-a"
+    -#   = link_to "ログイン", "#", class: "header-bottom-right-b"
+    .header-bottom-right_l
+      = link_to "❤️ いいね！一覧","#"
+      = link_to "🔔 お知らせ一覧","#"
+      = link_to "✔︎ やることリスト","#" 
+      = link_to image_tag("person.png",height:"38px", width:"38px"),"/users/:id/mypage"
+      マイページ
+
