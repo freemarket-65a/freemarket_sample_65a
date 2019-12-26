@@ -15,6 +15,7 @@ Rails.application.routes.draw do
       get 'profile'
       get 'credit'
       get 'logout'
+      get 'identification'
     end
   end
 

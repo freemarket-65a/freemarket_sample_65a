@@ -1,0 +1,101 @@
+* {
+  box-sizing: border-box;
+}
+
+.main {
+  display: flex;
+  margin: 40px auto 0;
+  padding-bottom: 40px;
+  width: 1020px;
+}
+
+.side_bar {
+  margin: 0 40px 0 0;
+}
+
+.content {
+  width: 700px;
+  font-size: 14px;  
+}
+
+.title {
+  background: #fff;
+  font-weight: bold;
+  display: block;
+  height: 54px;
+  font-size: 24px;
+  text-align: center;
+  padding: 8px 24px;
+  border-bottom: 2px solid#f5f5f5;
+}
+
+.date {
+  background: #fff;
+  padding: 64px;
+
+
+  &__footnote {
+    margin: 8px 0 0;
+    text-align: left;
+      }
+
+  &__upload {
+    margin: 8px 0 0;
+    text-align: right;
+    &--i {
+      color: #0099e8;
+    }
+  }
+
+  &__form {
+    font-weight: bold;
+    margin: 40px 0 0;
+    text-align: left;  
+  }
+
+  &--must {
+    height: 21px;
+    margin-top: 8px;
+    text-align: left;
+    font-size: 13px;
+  }
+
+  &--arbitrary{
+    margin: 0 0 0 8px;
+    padding: 2px 4px;
+    border-radius: 2px;
+    color: #fff;
+    font-size: 12px;
+    vertical-align: top;
+    background: #ccc;
+  }
+
+  &--any {
+    height: 40px;
+    width: 100%;
+    margin-top: 8px;
+    padding: 10px 16px 8px;
+    border: 1px solid#ccc;
+    border-radius: 5px;
+  }
+
+  &__button {
+    height: 50px;
+    width: 100%;
+    margin-top: 40px;
+    background-color: #ea352d;
+    color: white;
+    line-height: 50px;
+    text-align: center;
+  }
+
+  &__registration {
+    margin-top: 40px;
+    text-align: right;
+    &--i {
+      color: #0099e8;
+    }
+  }
+}
+
+
