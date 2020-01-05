@@ -2,13 +2,14 @@ class SignupController < ApplicationController
 
   def step1
     @user = User.new
+    # @user.build_address
   end
 
   def step2
     session[:user_params] = user_params  #userモデルの値をぶっこむ。
     session[:addresses_attributes_after_step1] = user_params[:addresses_attributes]  # profileモデルの値をぶっこむ。
     @user = User.new
-    @user.build_addersses
+    # @user.build_adderss
   end
 
   def create
@@ -36,8 +37,8 @@ class SignupController < ApplicationController
       :first_name_kana, 
       :birth_year, 
       :birth_month, 
-      :birth_day
-      addresses_attributes: [:id, :postal, :prefecture, :city, :address, :building]
+      :birth_day,
+      address_attributes: [:id, :postal, :prefecture, :city, :address, :building]
     )
   end
 

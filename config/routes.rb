@@ -40,7 +40,7 @@ resources :signup do
   collection do
     get 'step1'
     post 'step2'
-    get 'complete_signup'  #登録完了後
+    post 'complete_signup'  #登録完了後
   end
 end
 
