@@ -41,4 +41,7 @@
   .pur-main__inner
     .pur-main__inner--content
       = link_to "次へ進む", "https://www.mercari.com/jp/signup/registration/", class: "btn btn-mail"
-       
+  
+    = form_with url: complete_registration_path do
+      :plain
+        <script type="text/javascript" src="https://checkout.pay.jp" class="payjp-button" data-key="公開鍵"></script>

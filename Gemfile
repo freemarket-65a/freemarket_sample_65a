@@ -82,3 +82,5 @@ gem 'fog-aws'
 gem 'devise'
 
 gem "gretel"
+
+gem 'payjp'
