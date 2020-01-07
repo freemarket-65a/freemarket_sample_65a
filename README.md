@@ -31,6 +31,7 @@ Things you may want to cover:
 |password     |string     |null: false                    |
 |family_name  |string     |null: false                    |
 |last_name    |string     |null: false                    |
+|phonenumber  |integer    |null: false                    |
 |birthday     |integer    |null: false                    |
 
 ### Association
