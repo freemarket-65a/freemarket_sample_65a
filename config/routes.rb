@@ -35,4 +35,17 @@ Rails.application.routes.draw do
 
   resources :purchase, only: [:index, :show]
 
+  get "signup", to: "signup#index"
+
+  resources :signup do
+    collection do
+      get 'step1'
+      get 'step2'
+      get 'step3'
+      get 'step4'
+      get 'step5'
+      get 'complete_signup'
+    end
+  end
+
 end

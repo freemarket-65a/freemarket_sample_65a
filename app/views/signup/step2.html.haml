@@ -1,0 +1,29 @@
+= form_for @user, url: step3_signup_index_path, method: :get do |f|
+  = hidden_field_tag :current_step, 'step2'
+
+  = f.label :nickname, "ニックネーム"
+  = f.text_field :nickname
+
+  = f.label :email, "メールアドレス"
+  = f.text_field :email
+
+  = f.label :password, "パスワード"
+  = f.password_field :password
+
+  = f.label :password, "パスワード(確認)"
+  = f.password_field :password_confirmation
+
+  = f.label :family_name, "お名前(全角)"
+  = f.text_field :family_name
+  = f.text_field :last_name
+
+  = f.label :family_name_kana, "お名前カナ(全角)"
+  = f.text_field :family_name_kana
+  = f.text_field :last_name_kana
+
+  = f.label :birthday, "生年月日"
+  = f.text_field :birthday_year
+  = f.text_field :birthday_month
+  = f.text_field :birthday_day
+
+  = f.submit "次へ進む"

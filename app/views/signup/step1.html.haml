@@ -1,0 +1,4 @@
+= form_for @user, url: step2_signup_index_path, method: :get do |f|
+  = hidden_field_tag :current_step, 'step1'
+
+  = f.submit "次へ進む"
