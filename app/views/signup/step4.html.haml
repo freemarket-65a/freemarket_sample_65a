@@ -1,0 +1,21 @@
+= form_for @user, url: step5_signup_index_path, method: :get do |f|
+
+  = f.fields_for :addresses do |a|
+    = hidden_field_tag :current_step, 'step4'
+
+    = a.label :postal, "郵便番号"
+    = a.text_field :postal
+
+    = a.label :prefecture, "都道府県"
+    = a.text_field :prefecture
+
+    = a.label :city, "市区町村"
+    = a.text_field :city
+
+    = a.label :address, "その他住所"
+    = a.text_field :address
+
+    = a.label :building, "建物名"
+    = a.text_field :building
+
+    = f.submit "次へ進む"

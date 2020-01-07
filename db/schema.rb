@@ -32,9 +32,10 @@ ActiveRecord::Schema.define(version: 2020_01_03_062113) do
     t.string "family_name", null: false
     t.string "last_name_kana", null: false
     t.string "family_name_kana", null: false
-    t.integer "birthdate_year", null: false
-    t.integer "birthdate_month", null: false
-    t.integer "birthdate_day", null: false
+    t.integer "birthday_year", null: false
+    t.integer "birthday_month", null: false
+    t.integer "birthday_day", null: false
+    t.string "phonenumber", null: false
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
