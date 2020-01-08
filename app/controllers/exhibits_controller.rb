@@ -38,8 +38,12 @@ class ExhibitsController < ApplicationController
   end
 
   def destroy
-    @exhibit.destroy if @exhibit.user_id == current_user.id
-    redirect_to controller: :exhibits, action: :index
+    if @exhibit.user_id == current_user.id && @exhibit.destroy
+      redirect_to root_path
+    else
+      redirect_to show_exhibits_path(exhibit)
+      flash[:alert] = '商品削除に失敗しました'
+    end
   end
 
   private
