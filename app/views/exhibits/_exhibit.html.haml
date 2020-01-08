@@ -1,0 +1,18 @@
+.exhibit
+  = link_to exhibit_path(exhibit.id) do
+    %figure.exhibit__box
+      .img_exhibit
+      - if exhibit.images.present?
+        = image_tag "#{exhibit.images[0].src}", class:'pickup-exhibit__img'
+        .img_title
+          %p.img_price
+            ="¥#{exhibit.price}"
+      - else
+        = image_tag "", class:'pickup-exhibit__img'
+      %figcaption.text__box
+        %span 
+          = exhibit.name
+
+
+
+

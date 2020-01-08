@@ -83,3 +83,6 @@ gem 'devise'
 gem 'pry-rails'
 
 gem "gretel"
+gem 'mini_magick'
+gem 'jquery-rails'
+gem 'font-awesome-rails'
