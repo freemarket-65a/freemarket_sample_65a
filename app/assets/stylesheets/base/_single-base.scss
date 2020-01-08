@@ -29,3 +29,32 @@
   }
 }
 
+.single-form{
+  padding: 10px 16px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  width: 310px;box-sizing: content-box;
+}
+
+.s-flex{
+  display: flex;
+  justify-content: space-between;
+}
+
+.name-form{
+  padding: 10px 16px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  width: 160px;
+}
+
+.birth-form{
+  padding: 10px 16px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  width: 80px;
+}
+
+.birth-text{
+  line-height: 50px;
+}

@@ -20,14 +20,14 @@
     .header-bottom-right
     - if user_signed_in?
       = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'header-bottom-right-a'
-      = link_to  "マイページ", "#", class: "header-bottom-right-b"
+      = link_to  "マイページ", mypage_user_path(current_user), class: "header-bottom-right-b"
     - else
       = link_to "新規登録", step1_signup_index_path, class: 'header-bottom-right-a'
       = link_to "ログイン", new_user_session_path, class: 'header-bottom-right-b'
       -# ↓ログイン時、ログアウト時の切り替えに必要なため、記載（とりあえず、コメントアウト中）
       - if user_signed_in?
         = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'header-bottom-right-a'
-        = link_to  "マイページ", "#", class: "header-bottom-right-b"
+        = link_to "マイページ", "mypage_user_path", class: "header-bottom-right-b"
       - else
         = link_to "新規会員登録", new_user_registration_path, class: "header-bottom-right-a"
         = link_to "ログイン", new_user_session_path, class: "header-bottom-right-b"
