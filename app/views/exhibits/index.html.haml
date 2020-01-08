@@ -1,4 +1,5 @@
-= render 'header'
+= render 'products/header'
+= render 'shared/sell-btn'
 
 .toppage-main
   .top-image
@@ -30,7 +31,7 @@
             .pickup-contents__header-more
               = link_to "もっと見る ＞", "#"
           .pickup-contents__image
-            = render partial: 'exhibits/exhibit', collection: @exhibits
+            = render @exhibits
     .pickup-contents
       .pickup-content
         .pickup-content__img
@@ -43,7 +44,7 @@
             .pickup-contents__header-more
               = link_to "もっと見る ＞", "#"
           .pickup-contents__image
-            = render 'product'
+            = render 'products/product'
     .pickup-contents
       .pickup-content
         .pickup-content__img
@@ -56,7 +57,7 @@
             .pickup-contents__header-more
               = link_to "もっと見る ＞", "#"
           .pickup-contents__image
-            = render 'product'
+            = render 'products/product'
     .pickup-contents
       .pickup-content
         .pickup-content__img
@@ -69,6 +70,7 @@
             .pickup-contents__header-more
               = link_to "もっと見る ＞", "#"
           .pickup-contents__image
-            = render 'product'
+            = render 'products/product'
 
-= render 'footer'
+= render 'products/footer'
+

@@ -1,0 +1,61 @@
+.ex-main
+  .ex-main__inner
+    %h2 商品の情報を入力
+  .ex-main__inner
+    .ex-main__inner--content
+      .ex-center
+        .required-text 
+          出品画像
+          %span 必須 
+        .text_f
+          最大10枚までアップロードできます
+
+  = form_for @exhibit do |f|
+    
+    #image-box
+      #previews
+        - if @exhibit.persisted?
+          - @exhibit.images.each_with_index do |image, i|
+            = image_tag image.src.url, data: { index: i }, width: "100", height: '100'
+      = f.fields_for :images do |image|
+        .js-file_group{"data-index" => "#{image.index}"}
+          = image.file_field :src, class: 'js-file'
+          %br/
+          %span.js-remove 削除
+        - if @exhibit.persisted?
+          = image.check_box :_destroy, data:{ index: image.index }, class: 'hidden-destroy'
+          - if @exhibit.persisted?
+            .js-file_group{"data-index" => "#{@exhibit.images.count}"}
+              = file_field_tag :src, name: "exhibit[images_attributes][#{@exhibit.images.count}][src]", class: 'js-file'
+              .js-remove 削除
+
+    .ex-main__inner
+    商品名
+    = f.text_field :name
+    %br/
+    商品の説明
+    = f.text_field :detail
+    %br/
+    カテゴリー
+    = f.text_field :category
+    %br/
+    商品の状態
+    = f.text_field :condition
+    %br/
+    配送料の負担
+    = f.text_field :delicharge
+    %br/
+    発送元の地域
+    = f.text_field :shipfrom
+    %br/
+    発送までの日数
+    = f.text_field :dalidate
+    %br/
+    価格
+    = f.number_field :price
+    %br/
+
+    = f.submit "出品する", class:"button",id:"product_botton"
+    =link_to "戻る", root_path,class:"back-btn"
+
+

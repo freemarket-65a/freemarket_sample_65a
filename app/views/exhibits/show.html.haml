@@ -1,0 +1,20 @@
+= render "shared/single-header"
+
+.exhibit-detail
+  - @exhibit.images.each do |image|
+    = image_tag image.src.url
+  %p= @exhibit.user.nickname
+  %p= @exhibit.name
+  %p= @exhibit.detail
+  %p= @exhibit.category
+  %p= @exhibit.condition
+  %p= @exhibit.delicharge
+  %p= @exhibit.shipfrom
+  %p= @exhibit.dalidate
+  %p= "¥#{@exhibit.price}"
+
+  - if user_signed_in?
+    = link_to '編集', edit_exhibit_path(@exhibit)
+    = link_to '削除', exhibit_path(@exhibit), method: :delete
+
+= render "shared/single-footer"
