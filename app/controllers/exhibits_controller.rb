@@ -38,8 +38,8 @@ class ExhibitsController < ApplicationController
   end
 
   def destroy
-    @exhibit.destroy
-    redirect_to root_path
+    @exhibit.destroy if @exhibit.user_id == current_user.id
+    redirect_to controller: :exhibits, action: :index
   end
 
   private
@@ -54,9 +54,7 @@ class ExhibitsController < ApplicationController
 
   def move_index
     redirect_to action: :index unless user_signed_in?
-      # if @exhibit.user_id != current_user.id
-      #   redirect_to root_path
-      # end
+
   end
 
   def validate_user

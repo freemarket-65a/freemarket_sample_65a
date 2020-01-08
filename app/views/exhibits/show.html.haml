@@ -3,7 +3,6 @@
 .exhibit-detail
   - @exhibit.images.each do |image|
     = image_tag image.src.url
-  -# = image_tag "#{exhibit.srcs[0].src}"
   %p= @exhibit.user.nickname
   %p= @exhibit.name
   %p= @exhibit.detail
