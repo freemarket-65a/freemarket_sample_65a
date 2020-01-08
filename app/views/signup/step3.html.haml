@@ -1,7 +1,17 @@
-= form_for @user, url: step4_signup_index_path, method: :get do |f|
-  = hidden_field_tag :current_step, 'step3'
+.single-container
+  = render "shared/single-header"
+  .single-main
+    %h2 電話番号の確認
+    .single-main__inner
+      .single-main__inner--content
+        = form_for @user, url: step4_signup_index_path, method: :get do |f|
+          = hidden_field_tag :current_step, 'step3'
 
-  = f.label :phonenumber, "携帯電話番号"
-  = f.text_field :phonenumber
+          .text 携帯電話の番号
+          = f.text_field :phonenumber, placeholder: "携帯電話の番号を入力", class: "single-form"
 
-  = f.submit "次へ進む"
+          = f.submit "次へ進む", class: "btn btn-mail"
+        
+        .text ※携帯電話は他のユーザーに公開されることはありません。
+
+  = render "shared/single-footer"
