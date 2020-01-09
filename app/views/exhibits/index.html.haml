@@ -29,9 +29,9 @@
             .pickup-contents__header-name
               レディース新着アイテム
             .pickup-contents__header-more
-              = link_to "もっと見る ＞", "#"
+              = link_to "next_page(@Exhibits)", 'もっと見る', remote: true, id: 'view_more'
           .pickup-contents__image
-            = render @exhibits
+            = render @exhibits ,id:"article_lists"
     .pickup-contents
       .pickup-content
         .pickup-content__img
