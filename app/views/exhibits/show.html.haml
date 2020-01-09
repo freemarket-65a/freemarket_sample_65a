@@ -6,11 +6,11 @@
   %p= @exhibit.user.nickname
   %p= @exhibit.name
   %p= @exhibit.detail
-  %p= @exhibit.category
-  %p= @exhibit.condition
-  %p= @exhibit.delicharge
-  %p= @exhibit.shipfrom
-  %p= @exhibit.dalidate
+  %p= @exhibit.category.name
+  %p= @exhibit.condition.name
+  %p= @exhibit.delicharge.name
+  %p= @exhibit.shipfrom.name
+  %p= @exhibit.delidate.name
   %p= "¥#{@exhibit.price}"
 
   - if user_signed_in?
