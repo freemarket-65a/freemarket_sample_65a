@@ -6,7 +6,7 @@ class ExhibitsController < ApplicationController
   
   def index
     @exhibits = Exhibit.includes(:images).order('created_at DESC')
-    @exhibits = Exhibit.where(status: :true).order(created_at: :desc).page(params[:page])
+    @exhibits = Exhibit.all.limit(10).order(id: "DESC")
 
   end
 
