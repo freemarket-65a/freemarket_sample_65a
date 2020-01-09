@@ -5,6 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_one :address
+  belongs_to :card , optional: true
   accepts_nested_attributes_for :address
-
 end
