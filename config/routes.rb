@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   devise_for :users
 
   root to: 'exhibits#index'
+  # root to: 'exhibits#indexfirst'
 
   resources :exhibits
 
