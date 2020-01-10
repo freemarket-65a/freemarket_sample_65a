@@ -1,5 +1,5 @@
 .exhibit
-  = link_to exhibit_path(exhibit.id) do
+  = link_to exhibit_path(exhibit.id),data: {"turbolinks" => false} do
     %figure.exhibit__box
       .img_exhibit
       - if exhibit.images.present?
