@@ -5,6 +5,20 @@
     .d-product
       %h1= @exhibit.name
     .d-image
+      -# %ul.slider
+      -#   - image = Exhibit.all&.name
+      -#   - @exhibit.images.all ||= ""
+      -#   %li= image_tag "#{@exhibit.images[0].src}", alt: "image01", size: "100x100",class:''
+      -#   %li= image_tag "#{@exhibit.images[1].src}", alt: "image02", size: "100x100",class:''
+      -#   %li= image_tag "#{@exhibit.images[2]}", alt: "image03", size: "100x100",class:''
+      -#   %li= image_tag "#{@exhibit.images[3]}", alt: "image04", size: "100x100",class:''
+      -#   %li= image_tag "#{@exhibit.images[4]}", alt: "image05", size: "100x100",class:''
+      -# %ul.thumb
+      -#   %li= image_tag "#{@exhibit.images[0].src}", alt: "image01", size: "50x50",class:''
+      -#   <li><a href="#"><img src="images/02.jpg" alt="image02"></a></li>
+      -#   <li><a href="#"><img src="images/03.jpg" alt="image03"></a></li>
+      -#   <li><a href="#"><img src="images/04.jpg" alt="image04"></a></li>
+      -#   <li><a href="#"><img src="images/05.jpg" alt="image05"></a></li>
       - @exhibit.images.each do |image|
         = image_tag image.src.url
       .d-image__inner
