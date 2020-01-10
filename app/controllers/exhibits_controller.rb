@@ -26,8 +26,12 @@ class ExhibitsController < ApplicationController
   end
 
   def show
+    @exhibit = Exhibit.find(params[:id])
+    
+    @exhibits = Exhibit.includes(:images).order('created_at DESC')
+    @exhibits = Exhibit.all.limit(3).order(id: "DESC")
   end
-  
+
   def edit
   end
 
