@@ -1,4 +1,15 @@
-= form_for @user, url: step2_signup_index_path, method: :get do |f|
-  = hidden_field_tag :current_step, 'step1'
+.single-container
+  = render "shared/single-header"
 
-  = f.submit "次へ進む"
+  .single-main
+    %h2 新規会員登録
+    .single-main__inner
+      .single-main__inner--content
+        = form_for @user, url: step2_signup_index_path, method: :get do |f|
+          = hidden_field_tag :current_step, 'step1'
+          = f.submit "新規会員登録", class: "btn btn-mail"
+
+        %button.btn.btn-facebook Facebookで登録する
+        %button.btn.btn-google Googleで登録する
+
+  = render "shared/single-footer"

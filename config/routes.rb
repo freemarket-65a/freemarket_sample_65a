@@ -3,11 +3,11 @@ Rails.application.routes.draw do
   get 'card/new'
   get 'card/show'
   devise_for :users
-  # root to: 'users#profile' ←仮で画面確認のため、残しています。
-  # root to: 'users#mypage' ←仮で画面確認のため、残しています。
-  # root to: 'users#credit' ←仮で画面確認のため、残しています。
 
-  root to: 'products#index'
+  root to: 'exhibits#index'
+  # root to: 'exhibits#indexfirst'
+
+  resources :exhibits
 
   resources :products, only: [:index]
   
@@ -32,8 +32,6 @@ Rails.application.routes.draw do
     end
   end
   resources :details, only: [:index]
-  
-  resources :exhibit, only: [:index, :show]
 
   resources :purchase, only: [:index, :show]
 

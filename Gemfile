@@ -86,4 +86,7 @@ gem "gretel"
 
 gem 'payjp'
 
-gem "jquery-rails"
+gem 'mini_magick'
+gem 'jquery-rails'
+gem 'font-awesome-rails'
+gem 'active_hash'

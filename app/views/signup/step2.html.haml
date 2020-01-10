@@ -1,29 +1,51 @@
-= form_for @user, url: step3_signup_index_path, method: :get do |f|
-  = hidden_field_tag :current_step, 'step2'
+.single-container
+  = render "shared/single-header"
+  .single-main
+    %h2 会員情報入力
+    .single-main__inner
+      .single-main__inner--content
+        = form_for @user, url: step3_signup_index_path, method: :get do |f|
+          = hidden_field_tag :current_step, 'step2'
+          .required-text 
+            ニックネーム
+            %span 必須 
+          = f.text_field :nickname, placeholder: "例)フリマ太郎", class: "single-form"
+          .required-text 
+            メールアドレス
+            %span 必須 
+          = f.text_field :email, placeholder: "PC・携帯どちらでも可", class: "single-form"
+          .required-text 
+            パスワード
+            %span 必須 
+          = f.password_field :password, placeholder: "６文字以上", class: "single-form"
+          .required-text 
+            パスワード(確認)
+            %span 必須 
+          = f.password_field :password_confirmation, placeholder: "６文字以上", class: "single-form"
+          .required-text 
+            お名前(全角)
+            %span 必須 
+            .s-flex
+              = f.text_field :family_name, placeholder: "例)山田", class: "name-form"
+              = f.text_field :last_name, placeholder: "例)太郎", class: "name-form"
+          .required-text 
+            お名前カナ(全角)
+            %span 必須 
+            .s-flex
+              = f.text_field :family_name_kana, placeholder: "例)ヤマダ", class: "name-form"
+              = f.text_field :last_name_kana, placeholder: "例)タロウ", class: "name-form"
+          .required-text 
+            生年月日
+            %span 必須 
+            .s-flex
+              = f.text_field :birthday_year, placeholder: "--", class: "birth-form"
+              .birth-text 年
+              = f.text_field :birthday_month, placeholder: "--", class: "birth-form"
+              .birth-text 月
+              = f.text_field :birthday_day, placeholder: "--", class: "birth-form"
+              .birth-text 日
+       
+          = f.submit "次へ進む", class: "btn btn-mail"
 
-  = f.label :nickname, "ニックネーム"
-  = f.text_field :nickname
+  = render "shared/single-footer"
 
-  = f.label :email, "メールアドレス"
-  = f.text_field :email
-
-  = f.label :password, "パスワード"
-  = f.password_field :password
-
-  = f.label :password, "パスワード(確認)"
-  = f.password_field :password_confirmation
-
-  = f.label :family_name, "お名前(全角)"
-  = f.text_field :family_name
-  = f.text_field :last_name
-
-  = f.label :family_name_kana, "お名前カナ(全角)"
-  = f.text_field :family_name_kana
-  = f.text_field :last_name_kana
-
-  = f.label :birthday, "生年月日"
-  = f.text_field :birthday_year
-  = f.text_field :birthday_month
-  = f.text_field :birthday_day
-
-  = f.submit "次へ進む"

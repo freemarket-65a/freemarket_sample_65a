@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 2020_01_07_100353) do
     t.bigint "user_id", null: false
     t.string "name", null: false
     t.text "detail", null: false
+
     t.text "category", null: false
     t.text "condition", null: false
     t.text "delicharge", null: false
@@ -44,6 +45,7 @@ ActiveRecord::Schema.define(version: 2020_01_07_100353) do
     t.integer "price", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    
     t.index ["user_id"], name: "index_exhibits_on_user_id"
   end
 

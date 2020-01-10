@@ -8,6 +8,6 @@
     .lp      
       .lp-info
         .lp-info-lo
-          = link_to "ログアウト", "#", class: "lp-info-lot"
+          = link_to "ログアウト", destroy_user_session_path, method: :delete, class: "lp-info-lot"
 
 = render "products/footer"
