@@ -1,5 +1,8 @@
 class SignupController < ApplicationController
 
+  require "payjp"
+  Payjp.api_key = Rails.application.credentials.dig(:payjp, :PAYJP_PRIVATE_KEY)
+
   def step1
     @user = User.new
   end
@@ -29,8 +32,9 @@ class SignupController < ApplicationController
   end
 
   def step5
-    @user = User.new
     session[:addresses_attributes] = params[:user][:addresses]
+    @user = User.new
+    card = Card.where(user_id: session[:id])
   end
 
   def create
@@ -46,20 +50,36 @@ class SignupController < ApplicationController
       birthday_year: session[:birthday_year],
       birthday_month: session[:birthday_month],
       birthday_day: session[:birthday_day],
-      phonenumber: session[:phonenumber],
+      phonenumber: session[:phonenumber]
     )
     @user.build_address(session[:addresses_attributes])
+
     if @user.save
       session[:id] = @user.id  # ここでidをsessionに入れることでログイン状態に持っていける。
+      sign_in User.find(session[:id]) unless user_signed_in?
+
+      if params['payjp-token'].blank?
+        redirect_to action: "new"
+      else
+        customer = Payjp::Customer.create(
+        card: params['payjp-token']
+        ) #念の為metadataにuser_idを入れましたがなくてもOK
+        @card = Card.new(user_id: session[:id], customer_id: customer.id, card_id: customer.default_card)
+        if @card.save
+        else
+          redirect_to action: "pay"
+        end
+      end
+
       redirect_to complete_signup_signup_index_path
     else
       render '/signup/step1'
     end
   end
 
-  def complete_signup
-    sign_in User.find(session[:id]) unless user_signed_in?
-  end
+  # def complete_signup
+  #   sign_in User.find(session[:id]) unless user_signed_in?
+  # end
 
   private
   def user_params

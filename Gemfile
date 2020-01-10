@@ -83,8 +83,13 @@ gem 'devise'
 gem 'pry-rails'
 
 gem "gretel"
+
+gem 'payjp'
+
 gem 'mini_magick'
 gem 'jquery-rails'
 gem 'font-awesome-rails'
 
 gem 'kaminari'
+gem 'active_hash'
+

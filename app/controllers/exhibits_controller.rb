@@ -10,7 +10,6 @@ class ExhibitsController < ApplicationController
 
   end
 
-  # ↓以下、追加
   def new
     @exhibit = Exhibit.new
     @exhibit.images.new
@@ -52,7 +51,7 @@ class ExhibitsController < ApplicationController
   private
 
   def exhibit_params
-    params.require(:exhibit).permit(:name, :detail, :category, :condition, :delicharge, :shipfrom, :dalidate, :price, images_attributes: [:src, :_destroy, :id])
+    params.require(:exhibit).permit(:name, :detail, :category_id, :condition_id, :delicharge_id, :shipfrom_id, :delidate_id, :price, images_attributes: [:src, :_destroy, :id])
   end
 
   def set_exhibit

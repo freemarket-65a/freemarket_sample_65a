@@ -6,5 +6,12 @@ class Exhibit < ApplicationRecord
 
   paginates_per 10
 
+  extend ActiveHash::Associations::ActiveRecordExtensions
+  belongs_to_active_hash :shipfrom
+  belongs_to_active_hash :category
+  belongs_to_active_hash :condition
+  belongs_to_active_hash :delicharge
+  belongs_to_active_hash :delidate
+
 end
 
