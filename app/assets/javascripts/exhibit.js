@@ -112,14 +112,3 @@ $(document).on('turbolinks:load', ()=> {
 $('#article_lists').append("<%= escape_javascript(render @exhibits, object: @articles) %>");
 $("#view_more").replaceWith("<%= escape_javascript(link_to_next_page(@exhibits, 'もっと見る', remote: true, id: 'view_more')) %>");
 
-
-$('.slider').slick({
-    arrows:false,
-    asNavFor:'.thumb',
-});
-$('.thumb').slick({
-    asNavFor:'.slider',
-    focusOnSelect: true,
-    slidesToShow:5,
-    slidesToScroll:1
-});    
