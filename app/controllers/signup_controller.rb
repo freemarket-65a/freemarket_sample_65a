@@ -65,7 +65,6 @@ class SignupController < ApplicationController
         card: params['payjp-token']
         ) #念の為metadataにuser_idを入れましたがなくてもOK
         @card = Card.new(user_id: session[:id], customer_id: customer.id, card_id: customer.default_card)
-        binding.pry
         if @card.save
         else
           redirect_to action: "pay"
