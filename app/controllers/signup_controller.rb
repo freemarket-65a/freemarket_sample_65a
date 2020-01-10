@@ -1,7 +1,7 @@
 class SignupController < ApplicationController
 
   require "payjp"
-  Payjp.api_key = Rails.application.credentials.dig(:payjp, PAYJP_PRIVATE_KEY: sk_test_bb1e9735e121c3195900fe36)
+  Payjp.api_key = Rails.application.credentials.dig(:payjp, :PAYJP_PRIVATE_KEY)
 
   def step1
     @user = User.new
