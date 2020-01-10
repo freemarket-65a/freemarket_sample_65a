@@ -1,20 +1,85 @@
-= render "shared/single-header"
+= render 'products/header'
+.d-container
+  
+  .d-main
+    .d-product
+      %h1= @exhibit.name
+    .d-image
+      -# %ul.slider
+      -#   - image = Exhibit.all&.name
+      -#   - @exhibit.images.all ||= ""
+      -#   %li= image_tag "#{@exhibit.images[0].src}", alt: "image01", size: "100x100",class:''
+      -#   %li= image_tag "#{@exhibit.images[1].src}", alt: "image02", size: "100x100",class:''
+      -#   %li= image_tag "#{@exhibit.images[2]}", alt: "image03", size: "100x100",class:''
+      -#   %li= image_tag "#{@exhibit.images[3]}", alt: "image04", size: "100x100",class:''
+      -#   %li= image_tag "#{@exhibit.images[4]}", alt: "image05", size: "100x100",class:''
+      -# %ul.thumb
+      -#   %li= image_tag "#{@exhibit.images[0].src}", alt: "image01", size: "50x50",class:''
+      -#   <li><a href="#"><img src="images/02.jpg" alt="image02"></a></li>
+      -#   <li><a href="#"><img src="images/03.jpg" alt="image03"></a></li>
+      -#   <li><a href="#"><img src="images/04.jpg" alt="image04"></a></li>
+      -#   <li><a href="#"><img src="images/05.jpg" alt="image05"></a></li>
+      - @exhibit.images.each do |image|
+        = image_tag image.src.url
+      .d-image__inner
 
-.exhibit-detail
-  - @exhibit.images.each do |image|
-    = image_tag image.src.url
-  %p= @exhibit.user.nickname
-  %p= @exhibit.name
-  %p= @exhibit.detail
-  %p= @exhibit.category.name
-  %p= @exhibit.condition.name
-  %p= @exhibit.delicharge.name
-  %p= @exhibit.shipfrom.name
-  %p= @exhibit.delidate.name
-  %p= "¥#{@exhibit.price}"
+    %table.d-table
+      %tbody
+        %tr
+          %th 出品者
+          %td= @exhibit.user.nickname
+        %tr
+          %th カテゴリー
+          %td= @exhibit.category
+        %tr
+          %th ブランド
+          %td 
+        %tr
+          %th 商品の状態
+          %td= @exhibit.condition
+        %tr
+          %th 配送料の負担
+          %td= @exhibit.delicharge
+        %tr
+          %th 配送の方法
+          %td 未定
+        %tr
+          %th 配送元地域
+          %td= @exhibit.shipfrom
+        %tr
+          %th 発送日の目安
+          %td= @exhibit.dalidate
+   
+    .d-price
+      = "¥#{@exhibit.price}"
+      %span#tax (税込) 
+      %span#postage 送料込み
+      %br
 
-  - if user_signed_in?
-    = link_to '編集', edit_exhibit_path(@exhibit)
-    = link_to '削除', exhibit_path(@exhibit), method: :delete
+      - if user_signed_in?
+        = link_to '編集', edit_exhibit_path(@exhibit)
+        = link_to '削除', exhibit_path(@exhibit), method: :delete
 
-= render "shared/single-footer"
+
+      = link_to "購入画面に進む", "https://www.mercari.com/jp/signup/registration/", class: "btn btn-buy"
+   
+    .d-text= @exhibit.detail
+
+  .user-item
+    .user-item__title
+      = @exhibit.user.nickname
+      さんのその他の出品
+    .user-item__box
+      = image_tag "logo_gray.svg"
+      .user-item__box--name
+        text
+    .user-item__box
+      = image_tag "logo_gray.svg"
+      .user-item__box--name
+        text
+    .user-item__box
+      = image_tag "logo_gray.svg"
+      .user-item__box--name
+        text
+
+= render 'products/footer'

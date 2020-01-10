@@ -166,7 +166,57 @@
 
 .exhibit{
   font-size: 12px;
+  width: 20%;
+  padding: 10px;
+  box-sizing: border-box;
+  position: relative;
 }
+
+.img_exhibit{
+  width: 170px;
+  
+}
+
+.img_price{
+  // -webkit-box-align: center;
+  // -ms-flex-align: center;
+  align-items: center;
+  background: rgba(0,0,0,.4);
+  border-radius: 0 14px 14px 0;
+
+  // bottom: 8px;
+  // -webkit-box-sizing: border-box;
+  // box-sizing: border-box;
+  color: #fff;
+  // display: -webkit-inline-box;
+  // display: -ms-inline-flexbox;
+  // display: inline-flex;
+  font-size: 17px;
+  height: 28px;
+  
+  padding: 0 12px;
+  position: absolute;
+  bottom: 100px;
+  z-index: 2;
+}
+
+.pickup-exhibit__img{
+  width: 170px;
+  height: 170px;
+  background-color: #fff;
+}
+
+.text__box{
+  background-color: #fff;
+  width: 170px;
+  height: 50px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 50px;
+  padding: 0 10px;
+}
+
 
 .sellbox-form {
   border-top: 1px solid #eee;
