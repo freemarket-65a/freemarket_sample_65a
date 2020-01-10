@@ -59,7 +59,7 @@ class SignupController < ApplicationController
       sign_in User.find(session[:id]) unless user_signed_in?
 
       if params['payjp-token'].blank?
-        redirect_to action: "new" and return
+        redirect_to action: "new"
       else
         customer = Payjp::Customer.create(
         card: params['payjp-token']
@@ -67,13 +67,13 @@ class SignupController < ApplicationController
         @card = Card.new(user_id: session[:id], customer_id: customer.id, card_id: customer.default_card)
         if @card.save
         else
-          redirect_to action: "pay" and return
+          redirect_to action: "pay"
         end
       end
 
-      redirect_to complete_signup_signup_index_path and return
+      redirect_to complete_signup_signup_index_path
     else
-      render '/signup/step1' and return
+      render '/signup/step1'
     end
   end
 
