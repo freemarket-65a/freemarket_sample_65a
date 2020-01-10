@@ -3,8 +3,11 @@ class ExhibitsController < ApplicationController
   before_action :move_index, except: :index
   before_action :validate_user, only: [:show, :edit, :update, :destroy]
 
+  
   def index
     @exhibits = Exhibit.includes(:images).order('created_at DESC')
+    @exhibits = Exhibit.all.limit(10).order(id: "DESC")
+
   end
 
   def new
