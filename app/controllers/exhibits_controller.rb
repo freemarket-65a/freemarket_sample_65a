@@ -68,9 +68,9 @@ class ExhibitsController < ApplicationController
   end
 
   def validate_user
-    if @exhibit.user_id != current_user.id
-      redirect_to root_path
-    end
+    # if @exhibit.user_id != current_user.id
+    #   redirect_to root_path
+    # end
   end
 
 end
