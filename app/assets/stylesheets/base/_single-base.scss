@@ -32,8 +32,11 @@
 .single-form{
   padding: 10px 16px;
   font-size: 16px;
-  margin-bottom: 20px;
-  width: 310px;box-sizing: content-box;
+  margin-bottom: 30px;
+  width: 307px;
+  box-sizing: content-box;
+  border: solid 1px #ccc;
+  border-radius: 5px;
 }
 
 .s-flex{
@@ -44,15 +47,19 @@
 .name-form{
   padding: 10px 16px;
   font-size: 16px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   width: 160px;
+  border: solid 1px #ccc;
+  border-radius: 5px;
 }
 
 .birth-form{
   padding: 10px 16px;
   font-size: 16px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   width: 80px;
+  border: solid 1px #ccc;
+  border-radius: 5px;
 }
 
 .birth-text{
