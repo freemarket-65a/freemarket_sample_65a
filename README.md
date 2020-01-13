@@ -32,6 +32,7 @@ Things you may want to cover:
 |family_name  |string     |null: false                    |
 |last_name    |string     |null: false                    |
 |birthday     |integer    |null: false                    |
+|phonenumber  |string     |null: false                    |
 
 ### Association
 - has_many :comments
@@ -55,7 +56,7 @@ Things you may want to cover:
 belongs_to :user
 
 
-## paysテーブル
+## cardsテーブル
 
 |Column          |Type        |Options                        |
 |----------------|------------|-------------------------------|
