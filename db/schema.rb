@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(version: 2020_01_07_100353) do
     t.integer "shipfrom_id", null: false
     t.integer "delidate_id", null: false
     t.integer "price", null: false
+    t.integer "status", default: 1, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_exhibits_on_user_id"
