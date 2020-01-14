@@ -46,7 +46,6 @@ class ExhibitsController < ApplicationController
   require 'payjp'
 
   def buy
-    # Payjp.api_key = "sk_test_bb1e9735e121c3195900fe36"
     card = Card.where(user_id: current_user.id).first
     #Cardテーブルは前回記事で作成、テーブルからpayjpの顧客IDを検索
     if card.blank?
