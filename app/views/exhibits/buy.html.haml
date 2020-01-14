@@ -23,7 +23,7 @@
         .pur-left
           支払い方法
         .pur-right
-          変更する
+          
       .pur-main__inner--text
         クレジットカード
         %br
@@ -38,11 +38,11 @@
         .pur-left
           配送先
         .pur-right 
-          変更する
+          
       .pur-main__inner--text
-        -# = @address.postal
-        名古屋市名駅ああああああ
-        山本 拓哉
+        = "〒#{@exhibit.user.address.postal}"
+        %br= "#{@exhibit.user.address.prefecture} #{@exhibit.user.address.city} #{@exhibit.user.address.address}"
+        %br= "#{@exhibit.user.nickname}"
 
     
     .pur-main__inner

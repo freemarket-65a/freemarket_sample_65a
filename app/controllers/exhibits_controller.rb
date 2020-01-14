@@ -44,11 +44,7 @@ class ExhibitsController < ApplicationController
     end
   end
 
-  require 'payjp'
   
-  def set_card
-    @card = Card.find_by(user_id: current_user.id)
-  end
 
   def buy
   
@@ -86,6 +82,12 @@ class ExhibitsController < ApplicationController
   end
 
   private
+
+  require 'payjp'
+  
+  def set_card
+    @card = Card.find_by(user_id: current_user.id)
+  end
 
   def exhibit_params
     params.require(:exhibit).permit(:name, :detail, :category_id, :condition_id, :delicharge_id, :shipfrom_id, :delidate_id, :status, :price, images_attributes: [:src, :_destroy, :id])
