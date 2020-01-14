@@ -18,19 +18,19 @@
       ブランドから探す
 
     .header-bottom-right
-    - if user_signed_in?
-      -# ↓一時的にコメントアウト中
-      -# = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'header-bottom-right-a'
-      = link_to "❤️ いいね！一覧","#", class: 'header-bottom-right-c'
-      = link_to "🔔 お知らせ一覧","#", class: 'header-bottom-right-c'
-      = link_to "✔︎ やることリスト","#" , class: 'header-bottom-right-c'
-      = link_to image_tag("person.png",height:"38px", width:"38px"),mypage_user_path(current_user), class: "header-bottom-right-l"
-      .header-bottom-right-c
-        マイページ
+      - if user_signed_in?
+        -# ↓一時的にコメントアウト中
+        -# = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'header-bottom-right-a'
+        = link_to "❤️ いいね！一覧","#", class: 'header-bottom-right-c'
+        = link_to "🔔 お知らせ一覧","#", class: 'header-bottom-right-c'
+        = link_to "✔︎ やることリスト","#" , class: 'header-bottom-right-c'
+        = link_to image_tag("person.png",height:"38px", width:"38px"),mypage_user_path(current_user), class: "header-bottom-right-l"
+        .header-bottom-right-c
+          マイページ
 
-    - else
-      = link_to "新規会員登録", step1_signup_index_path, class: 'header-bottom-right-a'
-      = link_to "ログイン", new_user_session_path, class: 'header-bottom-right-b'
+      - else
+        = link_to "新規会員登録", step1_signup_index_path, class: 'header-bottom-right-a'
+        = link_to "ログイン", new_user_session_path, class: 'header-bottom-right-b'
 
 
   
