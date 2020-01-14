@@ -8,24 +8,9 @@
       %ul.slick
         - @exhibit.images.each do |image|
           %li= image_tag image.src.url, size: "300x300", alt: @exhibit.images.ids
-
-        -# %li= image_tag "#{@exhibit.images[0].src}", alt: "image01", size: "300x300",class:''
-        -# %li= image_tag "#{@exhibit.images[1].src}", alt: "image02", size: "300x300",class:''
-        -# %li= image_tag "#{@exhibit.images[2].src}", alt: "image03", size: "300x300",class:''
-        -# %li= image_tag "#{@exhibit.images[3].src}", alt: "image04", size: "300x300",class:''
-        -# %li= image_tag "#{@exhibit.images[4].src}", alt: "image05", size: "300x300",class:''
       %ul.thumb
         - @exhibit.images.each do |image|
           %li= image_tag image.src.url, size: "60x60", alt: @exhibit.images.ids
-        -# %li= image_tag "#{@exhibit.images[0].src}", alt: "image01", size: "60x60",class:''
-        -# %li= image_tag "#{@exhibit.images[1].src}", alt: "image02", size: "60x60",class:''
-        -# %li= image_tag "#{@exhibit.images[2].src}", alt: "image03", size: "60x60",class:''
-        -# %li= image_tag "#{@exhibit.images[3].src}", alt: "image04", size: "60x60",class:''
-        -# %li= image_tag "#{@exhibit.images[4].src}", alt: "image05", size: "60x60",class:''
-        
-      -# - @exhibit.images.each do |image|
-      -#   = image_tag image.src.url
-      -# .d-image__inner
 
     %table.d-table
       %tbody
@@ -64,7 +49,7 @@
         = link_to '編集', edit_exhibit_path(@exhibit), class: "btn btn-current"
         = link_to '削除', exhibit_path(@exhibit), method: :delete, class: "btn btn-current"
       - else
-        = link_to "購入画面に進む", "https://www.mercari.com/jp/signup/registration/", class: "btn btn-buy"
+        = link_to "購入画面に進む", buy_exhibit_path(@exhibit), class: "btn btn-buy"
    
     .d-text= @exhibit.detail
 

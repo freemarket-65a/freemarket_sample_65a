@@ -7,7 +7,13 @@ Rails.application.routes.draw do
   root to: 'exhibits#index'
   # root to: 'exhibits#indexfirst'
 
-  resources :exhibits
+  resources :exhibits do
+    member do
+      get 'buy'
+      post 'pay'
+      get 'done', to: 'exhibits#index'
+    end
+  end
 
   resources :products, only: [:index]
   
@@ -32,8 +38,6 @@ Rails.application.routes.draw do
     end
   end
   resources :details, only: [:index]
-
-  resources :purchase, only: [:index, :show]
 
   get "signup", to: "signup#index"
 
