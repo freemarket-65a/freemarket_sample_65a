@@ -1,3 +1,117 @@
 = render "shared/single-header"
-= render partial: 'form'
+.ex-main
+  .ex-main__inner
+    %h2 商品の情報を入力
+  = form_for @exhibit do |f|
+    .ex-main__inner
+      .ex-main__inner--content
+        .ex-center
+          .required-text 
+            出品画像
+            %span 必須 
+          .text-m
+            最大5枚までアップロードできます
+            .text-m-a
+              ドラッグアンドドロップまたはクリックしてファイルをアップロード
+
+          .sellbox-form__upload--drop#click-btn
+            .sellbox-form__upload--drop--post
+              
+              .dropzone-container
+                #preview
+                .dropzone-area
+                  = f.fields_for :images do |image|
+                    = image.label :src, class: "dropzone-box", for: "upload-image__btn" do
+                      .input_area
+                        = image.file_field :src, id: "upload-image__btn", class: "upload-image", 'data-image': 0, type: "file", name: "exhibit[images_attributes][0][src]"
+                      %p
+                        ドラッグアンドドロップ
+                        %br
+                        またはクリックしてファイルをダウンロード
+
+    .ex-main__inner
+      .ex-main__inner--content
+        .ex-center
+          .required-text 
+            商品名
+            %span 必須 
+          = f.text_field :name, class: "ex-form", placeholder: "商品名(必須 40文字まで)"
+          .required-text 
+            商品の説明
+            %span 必須 
+          = f.text_field :detail, class: "ex-lg-form", placeholder: "商品名(必須 1,000文字以内) (色、素材、重さ、注意点など)"
+        
+    .ex-main__inner
+      .ex-main__inner--content
+        .required-left
+          商品の詳細
+        .required-right
+          .required-text 
+            カテゴリー
+            %span 必須 
+          .text
+          = f.collection_select :category_id, Category.all, :id, :name, {prompt: "---"}, class: 'ex-form-s'
+          = fa_icon "chevron-down", class: "id-form-icon" 
+          .required-text 
+            商品の状態
+            %span 必須 
+          .text
+          = f.collection_select :condition_id, Condition.all, :id, :name, {prompt: "---"}, class: 'ex-form-s'
+          = fa_icon "chevron-down", class: "id-form-icon"
+          
+    .ex-main__inner
+      .ex-main__inner--content
+        .required-left
+          配送について
+        .required-right
+          .required-text 
+            配送料の負担
+            %span 必須
+          .text
+          = f.collection_select :delicharge_id, Delicharge.all, :id, :name, {prompt: "---"}, class: 'ex-form-s'
+          = fa_icon "chevron-down", class: "id-form-icon"
+          .required-text 
+            発送元の地域
+            %span 必須
+          .text
+          = f.collection_select :shipfrom_id, Shipfrom.all, :id, :name, {prompt: "---"}, class: 'ex-form-s'
+          = fa_icon "chevron-down", class: "id-form-icon"
+          .required-text 
+            発送までの日数
+            %span 必須 
+          .text
+          = f.collection_select :delidate_id, Delidate.all, :id, :name, {prompt: "---"}, class: 'ex-form-s'
+          = fa_icon "chevron-down", class: "id-form-icon"
+        
+    .ex-main__inner
+      .ex-main__inner--content
+        .required-left
+          販売価格(300〜9,999,999)
+        .required-right
+          .sale-box
+            .required-text 
+              価格
+              %span 必須
+            .text-m
+              ¥
+              = f.number_field :price, min:300, max:9999999, class: "sale-form", id: "sell-price", placeholder: "例）300"
+          .sale-box
+            .required-text 
+              販売手数料(10%)
+            .text-m
+              .right
+                #mercari_fee
+          .sale-box
+            .required-text 
+              販売利益
+            .text-m
+              .right
+                #seller_gain
+    .ex-main__inner
+      .ex-main__inner--content
+        .ex-center
+          = f.submit "出品する", class:"btn-mail-e",id:"product_botton"
+          =link_to "戻る", root_path,class:"btn-back"
+
+
 = render "shared/single-footer"

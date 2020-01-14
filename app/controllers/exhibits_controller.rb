@@ -8,7 +8,7 @@ class ExhibitsController < ApplicationController
   
   def index
     @exhibits = Exhibit.includes(:images).order('created_at DESC')
-    @exhibits = Exhibit.all.limit(10).order(id: "DESC")
+    @exhibits = Exhibit.all.limit(20).order(id: "DESC")
 
   end
 
