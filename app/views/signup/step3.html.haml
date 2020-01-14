@@ -7,8 +7,8 @@
         = form_for @user, url: step4_signup_index_path, method: :get do |f|
           = hidden_field_tag :current_step, 'step3'
 
-          .text 携帯電話の番号
-          = f.text_field :phonenumber, placeholder: "携帯電話の番号を入力", class: "single-form"
+          %h3 携帯電話の番号
+          = f.text_field :phonenumber, placeholder: "例)09012341234", class: "single-form"
 
           = f.submit "次へ進む", class: "btn btn-mail"
         
