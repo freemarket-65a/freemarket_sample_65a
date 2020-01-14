@@ -1,4 +1,7 @@
 class PurchaseController < ApplicationController
-  def purchase
+
+  def index
+
   end
+
 end
