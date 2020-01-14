@@ -2,6 +2,7 @@ class ExhibitsController < ApplicationController
   before_action :set_exhibit, except: [:index, :new, :create]
   before_action :move_index, except: :index
   before_action :validate_user, only: [:show, :edit, :update, :destroy]
+  before_action :set_card, only: [:buy, :pay]
 
   
   def index
@@ -44,33 +45,34 @@ class ExhibitsController < ApplicationController
   end
 
   require 'payjp'
+  
+  def set_card
+    @card = Card.find_by(user_id: current_user.id)
+  end
 
   def buy
-    
-    card = Card.find_by(user_id: current_user.id)
+  
     #Cardテーブルは前回記事で作成、テーブルからpayjpの顧客IDを検索
-    if card.blank?
+    if set_card.blank?
       #登録された情報がない場合にカード登録画面に移動
       redirect_to controller: "card", action: "index"
     else
       Payjp.api_key = Rails.application.credentials.dig(:payjp, :PAYJP_PRIVATE_KEY)
       #保管した顧客IDでpayjpから情報取得
-      customer = Payjp::Customer.retrieve(card.customer_id)
+      customer = Payjp::Customer.retrieve(@card.customer_id)
       #保管したカードIDでpayjpから情報取得、カード情報表示のためインスタンス変数に代入
-      @default_card_information = customer.cards.retrieve(card.card_id)
+      @default_card_information = customer.cards.retrieve(@card.card_id)
     end
   end
 
   def pay
-    def pay
-      card = Card.where(user_id: current_user.id).first
-      Payjp::Charge.create(
-      :amount => @exhibit.price, #支払金額を入力（itemテーブル等に紐づけても良い）
-      :customer => card.customer_id, #顧客ID
-      :currency => 'jpy', #日本円
+    # card = Card.where(user_id: current_user.id).first
+    Payjp::Charge.create(
+    :amount => @exhibit.price, #支払金額を入力（itemテーブル等に紐づけても良い）
+    :customer => set_card.customer_id, #顧客ID
+    :currency => 'jpy', #日本円   
     )
     redirect_to action: 'index' #完了画面に移動
-    end
   end
 
 
