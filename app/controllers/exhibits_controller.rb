@@ -4,6 +4,7 @@ class ExhibitsController < ApplicationController
   before_action :validate_user, only: [:show, :edit, :update, :destroy]
   before_action :set_card, only: [:buy, :pay]
 
+  require 'payjp'
   
   def index
     @exhibits = Exhibit.includes(:images).order('created_at DESC')
@@ -83,7 +84,6 @@ class ExhibitsController < ApplicationController
 
   private
 
-  require 'payjp'
   
   def set_card
     @card = Card.find_by(user_id: current_user.id)
