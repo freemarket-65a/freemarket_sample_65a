@@ -46,12 +46,13 @@ class ExhibitsController < ApplicationController
   require 'payjp'
 
   def buy
-    Payjp.api_key = "sk_test_bb1e9735e121c3195900fe36"
+    Payjp.api_key = Rails.application.credentials.dig(:payjp, :PAYJP_PRIVATE_KEY)
+    # Payjp.api_key = "sk_test_bb1e9735e121c3195900fe36"
     card = Card.where(user_id: current_user.id).first
     #Cardテーブルは前回記事で作成、テーブルからpayjpの顧客IDを検索
     if card.blank?
       #登録された情報がない場合にカード登録画面に移動
-      redirect_to controller: "card", action: "new"
+      redirect_to controller: "card", action: "index"
     else
       #保管した顧客IDでpayjpから情報取得
       customer = Payjp::Customer.retrieve(card.customer_id)
@@ -63,7 +64,7 @@ class ExhibitsController < ApplicationController
   def pay
     def pay
       card = Card.where(user_id: current_user.id).first
-      Payjp.api_key = "sk_test_bb1e9735e121c3195900fe36"
+      # Payjp.api_key = "sk_test_bb1e9735e121c3195900fe36"
       Payjp::Charge.create(
       :amount => @exhibit.price, #支払金額を入力（itemテーブル等に紐づけても良い）
       :customer => card.customer_id, #顧客ID
