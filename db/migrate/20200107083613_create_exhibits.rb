@@ -10,8 +10,8 @@ class CreateExhibits < ActiveRecord::Migration[5.2]
       t.integer          :shipfrom_id,     null: false
       t.integer          :delidate_id,     null: false
       t.integer          :price,           null: false
+      t.integer          :status,          null: false, default: 1 
       t.timestamps
     end
   end
 end
-

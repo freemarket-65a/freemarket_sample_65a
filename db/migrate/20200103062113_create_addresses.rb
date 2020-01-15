@@ -7,7 +7,7 @@ class CreateAddresses < ActiveRecord::Migration[5.2]
       t.string :prefecture, null: false
       t.string :city, null: false
       t.string :address, null: false
-      t.string :building, null: false
+      t.string :building
 
       t.timestamps
     end
