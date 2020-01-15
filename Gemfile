@@ -92,4 +92,5 @@ gem 'font-awesome-rails'
 gem 'active_hash'
 gem 'ancestry'
 gem 'kaminari'
+gem 'rails-i18n'
 
