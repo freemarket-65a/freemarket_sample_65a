@@ -14,7 +14,6 @@ class Exhibit < ApplicationRecord
   belongs_to_active_hash :delidate
 
   belongs_to :category
-  # has_ancestry
 
   validates :name, presence: true
   validates :detail, presence: true
@@ -24,5 +23,6 @@ class Exhibit < ApplicationRecord
   validates :shipfrom_id, presence: true
   validates :delidate_id, presence: true
   validates :price, presence: true
+
 end
 
