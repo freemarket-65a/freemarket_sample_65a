@@ -40,6 +40,14 @@
   }
 }
 
+.listing-product-detail__category{
+  text-align: left;
+  span{
+    background-color: #ea352d;
+    color: white;
+  }
+}
+
 .text_f{
   text-align: left;  
 }
@@ -98,6 +106,17 @@
     margin: 20px -12px 0 0;
     
   }
+}
+
+.listing-select-wrapper__box--select{
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px 16px 8px;
+  margin-bottom: 20px;
+  height: 45px;
+  background-color: #ffffff;
+  color: #3a3a3a;
+  border: 1px solid #ccc;
 }
 
 .ex-form-s{

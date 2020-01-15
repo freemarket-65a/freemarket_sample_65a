@@ -13,5 +13,7 @@ class Exhibit < ApplicationRecord
   belongs_to_active_hash :delicharge
   belongs_to_active_hash :delidate
 
+  belongs_to :category
+  # has_ancestry
 end
 

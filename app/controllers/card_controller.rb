@@ -35,13 +35,13 @@ class CardController < ApplicationController
       redirect_to action: "new"
   end
 
-  # def show #Cardのデータpayjpに送り情報を取り出します
-  #   card = Card.where(user_id: current_user.id).first
-  #   if card.blank?
-  #     redirect_to action: "new" 
-  #   else
-  #     customer = Payjp::Customer.retrieve(card.customer_id)
-  #     @default_card_information = customer.cards.retrieve(card.card_id)
-  #   end
-  # end
+  def show #Cardのデータpayjpに送り情報を取り出します
+    card = Card.where(user_id: current_user.id).first
+    if card.blank?
+      redirect_to action: "new" 
+    else
+      customer = Payjp::Customer.retrieve(card.customer_id)
+      @default_card_information = customer.cards.retrieve(card.card_id)
+    end
+  end
 end
