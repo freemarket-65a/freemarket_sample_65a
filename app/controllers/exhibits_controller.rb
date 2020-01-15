@@ -10,7 +10,7 @@ class ExhibitsController < ApplicationController
   
   def index
     @exhibits = Exhibit.includes(:images).order('created_at DESC')
-    @exhibits = Exhibit.all.limit(10).order(id: "DESC")
+    @exhibits = Exhibit.all.limit(20).order(id: "DESC")
 
   end
 
@@ -68,7 +68,6 @@ class ExhibitsController < ApplicationController
   
 
   def buy
-  
     #Cardテーブルは前回記事で作成、テーブルからpayjpの顧客IDを検索
     if set_card.blank?
       #登録された情報がない場合にカード登録画面に移動
@@ -89,7 +88,12 @@ class ExhibitsController < ApplicationController
     :customer => set_card.customer_id, #顧客ID
     :currency => 'jpy', #日本円   
     )
-    redirect_to action: 'index' #完了画面に移動
+    @exhibit.update(status: 2)
+    redirect_to action: 'done' #完了画面に移動
+  end
+
+  def done
+
   end
 
 

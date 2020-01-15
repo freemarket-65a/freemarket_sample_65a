@@ -1,0 +1,42 @@
+.single-container
+  = render "shared/single-header"
+  .pur-main
+    .pur-main__inner
+      %h2 購入完了
+    .pur-main__inner
+      .pur-main__inner--content
+        .purchase-image
+          = image_tag "#{@exhibit.images[-1].src}",size: "50x50"
+        .purchase-text
+          = @exhibit.name
+          = "¥#{@exhibit.price}  (税込) 送料込み "
+
+    .pur-main__inner
+      .pur-main__inner--content
+        .pur-left
+          支払い金額
+        .pur-right
+          = "¥#{@exhibit.price}"
+
+    .pur-main__inner
+      .pur-main__inner--content
+        .pur-left
+          配送先
+        .pur-right 
+          
+      .pur-main__inner--text
+        = "〒#{@exhibit.user.address.postal}"
+        %br= "#{@exhibit.user.address.prefecture} #{@exhibit.user.address.city} #{@exhibit.user.address.address}"
+        %br= "#{@exhibit.user.nickname}"
+    
+    .pur-main__inner
+      .pur-main__inner--content
+        購入が完了しました。
+        ありがとうございました。
+
+    
+    .pur-main__inner
+      .pur-main__inner--content
+        =link_to "購入完了", root_path,class:"btn-back"
+        
+  = render "shared/single-footer"

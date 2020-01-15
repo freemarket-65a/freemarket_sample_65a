@@ -45,7 +45,9 @@
       %span#postage 送料込み
       %br
 
-      - if @exhibit.user_id == current_user.id
+      - if @exhibit.status == 2
+        = link_to '売り切れました', root_path, class: "btn btn-current"
+      - elsif @exhibit.user_id == current_user.id
         = link_to '編集', edit_exhibit_path(@exhibit), class: "btn btn-current"
         = link_to '削除', exhibit_path(@exhibit), method: :delete, class: "btn btn-current"
       - else

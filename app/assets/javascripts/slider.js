@@ -6,9 +6,9 @@ $(function() {
       autoplaySpeed:2000,
   });
   $('.thumb').slick({
-      asNavFor:'.slider',
+      asNavFor:'.slick',
       focusOnSelect: true,
       slidesToShow:5,
-      slidesToScroll:1
+      // slidesToScroll:1
   });  
 });  

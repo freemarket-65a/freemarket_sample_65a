@@ -4,7 +4,7 @@
 .toppage-main
   .top-image
     .slider
-      = image_tag("28926661.jpg",height:"60%", width:"100%")
+      = image_tag("28926661.jpg",height:"60%", width:"100%", class:"top-i")
   .pickup-container
     .pickup-header
       %h2.pickup-header__name
@@ -27,50 +27,50 @@
         .pickup-contents-box
           .pickup-contents__header
             .pickup-contents__header-name
-              レディース新着アイテム
+              新着アイテム
             .pickup-contents__header-more
               = link_to 'もっと見る ＞', '#', remote: true, id: 'view_more'
           .pickup-contents__image
             = render @exhibits, id:"article_lists"
-    .pickup-contents
-      .pickup-content
-        .pickup-content__img
-        .pickup-content__text__box
-      .pickup-content__price-box
-        .pickup-contents-box
-          .pickup-contents__header
-            .pickup-contents__header-name
-              メンズ新着アイテム
-            .pickup-contents__header-more
-              = link_to "もっと見る ＞", "#"
-          .pickup-contents__image
-            = render 'products/product'
-    .pickup-contents
-      .pickup-content
-        .pickup-content__img
-        .pickup-content__text__box
-      .pickup-content__price-box
-        .pickup-contents-box
-          .pickup-contents__header
-            .pickup-contents__header-name
-              家電・スマホ・カメラ新着アイテム
-            .pickup-contents__header-more
-              = link_to "もっと見る ＞", "#"
-          .pickup-contents__image
-            = render 'products/product'
-    .pickup-contents
-      .pickup-content
-        .pickup-content__img
-        .pickup-content__text__box
-      .pickup-content__price-box
-        .pickup-contents-box
-          .pickup-contents__header
-            .pickup-contents__header-name
-              おもちゃ・ホビー・グッズ新着アイテム
-            .pickup-contents__header-more
-              = link_to "もっと見る ＞", "#"
-          .pickup-contents__image
-            = render 'products/product'
+    -# .pickup-contents
+    -#   .pickup-content
+    -#     .pickup-content__img
+    -#     .pickup-content__text__box
+    -#   .pickup-content__price-box
+    -#     .pickup-contents-box
+    -#       .pickup-contents__header
+    -#         .pickup-contents__header-name
+    -#           メンズ新着アイテム
+    -#         .pickup-contents__header-more
+    -#           = link_to "もっと見る ＞", "#"
+    -#       .pickup-contents__image
+    -#         = render 'products/product'
+    -# .pickup-contents
+    -#   .pickup-content
+    -#     .pickup-content__img
+    -#     .pickup-content__text__box
+    -#   .pickup-content__price-box
+    -#     .pickup-contents-box
+    -#       .pickup-contents__header
+    -#         .pickup-contents__header-name
+    -#           家電・スマホ・カメラ新着アイテム
+    -#         .pickup-contents__header-more
+    -#           = link_to "もっと見る ＞", "#"
+    -#       .pickup-contents__image
+    -#         = render 'products/product'
+    -# .pickup-contents
+    -#   .pickup-content
+    -#     .pickup-content__img
+    -#     .pickup-content__text__box
+    -#   .pickup-content__price-box
+    -#     .pickup-contents-box
+    -#       .pickup-contents__header
+    -#         .pickup-contents__header-name
+    -#           おもちゃ・ホビー・グッズ新着アイテム
+    -#         .pickup-contents__header-more
+    -#           = link_to "もっと見る ＞", "#"
+    -#       .pickup-contents__image
+    -#         = render 'products/product'
 
 = render 'products/footer'
 

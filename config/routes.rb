@@ -18,7 +18,7 @@ Rails.application.routes.draw do
     member do
       get 'buy'
       post 'pay'
-      get 'done', to: 'exhibits#index'
+      get 'done'
     end
   end
 
