@@ -96,7 +96,7 @@ $(document).on('turbolinks:load', ()=> {
     var seller_gain = price - mercari_fee
 
     // 画像入力欄が0個にならないようにしておく
-    if ($('.js-file').length == 0) $('#image-box').append(buildFileField(fileIndex[0]));
+    // if ($('.js-file').length == 0) $('#image-box').append(buildFileField(fileIndex[0]));
 
     if (price >= 300 && price <= 9999999) {
       $('#mercari_fee').text('¥' + mercari_fee.toLocaleString())
@@ -109,17 +109,17 @@ $(document).on('turbolinks:load', ()=> {
   })
 });
 
-$('#article_lists').append("<%= escape_javascript(render @exhibits, object: @articles) %>");
-$("#view_more").replaceWith("<%= escape_javascript(link_to_next_page(@exhibits, 'もっと見る', remote: true, id: 'view_more')) %>");
+// $('#article_lists').append("<%= escape_javascript(render @exhibits, object: @articles) %>");
+// $("#view_more").replaceWith("<%= escape_javascript(link_to_next_page(@exhibits, 'もっと見る', remote: true, id: 'view_more')) %>");
 
 
-$('.slider').slick({
-    arrows:false,
-    asNavFor:'.thumb',
-});
-$('.thumb').slick({
-    asNavFor:'.slider',
-    focusOnSelect: true,
-    slidesToShow:5,
-    slidesToScroll:1
-});    
+// $('.slider').slick({
+//     arrows:false,
+//     asNavFor:'.thumb',
+// });
+// $('.thumb').slick({
+//     asNavFor:'.slider',
+//     focusOnSelect: true,
+//     slidesToShow:5,
+//     slidesToScroll:1
+// });    
