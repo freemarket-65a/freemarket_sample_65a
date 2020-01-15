@@ -73,7 +73,7 @@ $color-border: #f5f5f5;
 
 .user-item{
   width: 100%;
-  margin: 0 auto 50px;
+  margin: 0 auto 20px;
   &__title{
     color: #0099e8;
     font-size: 22px;
@@ -81,11 +81,16 @@ $color-border: #f5f5f5;
     text-align: left;
   }
   &__box{
-    display: inline-block;
-    box-sizing: content-box;
-    width: calc(33.3333% - 10px);
-    margin: 0 4px 4px 0;
-    background-color: #fff;
+    max-width: 90vw;
+    margin-left: 300px;
+    // margin-top: 20px;
+    // margin: 20px 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align:  center;
+    align-items: center;
   }
+  
 }
 

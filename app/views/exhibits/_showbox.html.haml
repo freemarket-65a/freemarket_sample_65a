@@ -1,25 +1,25 @@
-.exhibit
-  = link_to exhibit_path(exhibit.id),data: {"turbolinks" => false} do
+.ex
+  = link_to exhibit_path(@exhibit.id),data: {"turbolinks" => false} do
     %figure.exhibit__box
       .img_exhibit
-      - if exhibit.status == 2
+      - if @exhibit.status == 2
         .items-sold
           .items-sold__inner
             SOLD
-      - elsif exhibit.images.present?
-        = image_tag "#{exhibit.images[-1].src}", class:'pickup-exhibit__img'
+      - elsif @exhibit.images.present?
+        = image_tag "#{@exhibit.images[-1].src}", class:'pickup-exhibit__img'
         .img_title
           %p.img_price
-            ="¥#{exhibit.price}"
+            ="¥#{@exhibit.price}"
       - else
         = image_tag "28926661.jpg", class:'pickup-exhibit__img'
         .img_title
           %p.img_price
-            ="¥#{exhibit.price}"
+            ="¥#{@exhibit.price}"
       
       %figcaption.text__box
         %span 
-          = exhibit.name
+          = @exhibit.name
       
 
 
