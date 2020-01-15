@@ -47,13 +47,11 @@ class ExhibitsController < ApplicationController
 
   def show
     @exhibit = Exhibit.find(params[:id])
-    
     @exhibits = Exhibit.includes(:images).order('created_at DESC')
     @exhibits = Exhibit.all.limit(3).order(id: "DESC")
   end
 
   def edit
-    # @exhibit = Exhibit.find(params[:id])
     @category_parent_array = Category.where(ancestry: nil)
   end
 
@@ -82,7 +80,6 @@ class ExhibitsController < ApplicationController
   end
 
   def pay
-    # card = Card.where(user_id: current_user.id).first
     Payjp::Charge.create(
     :amount => @exhibit.price, #支払金額を入力（itemテーブル等に紐づけても良い）
     :customer => set_card.customer_id, #顧客ID
