@@ -15,5 +15,14 @@ class Exhibit < ApplicationRecord
 
   belongs_to :category
   # has_ancestry
+
+  validates :name, presence: true
+  validates :detail, presence: true
+  validates :category_id, presence: true
+  validates :condition_id, presence: true
+  validates :delicharge_id, presence: true
+  validates :shipfrom_id, presence: true
+  validates :delidate_id, presence: true
+  validates :price, presence: true
 end
 
