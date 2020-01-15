@@ -1,8 +1,6 @@
 class ExhibitsController < ApplicationController
   before_action :set_exhibit, except: [:index, :new, :create, :get_category_children, :get_category_grandchildren]
-  # before_action :set_exhibit, except: [:index, :new, :create]
   before_action :move_index, except: :index
-
   before_action :validate_user, only: [:show, :edit, :update, :destroy]
   before_action :set_card, only: [:buy, :pay]
 
@@ -53,7 +51,6 @@ class ExhibitsController < ApplicationController
   end
 
   def edit
-    # @exhibit = Exhibit.find(params[:id])
     @category_parent_array = Category.where(ancestry: nil)
   end
 
