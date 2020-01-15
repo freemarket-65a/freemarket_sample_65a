@@ -14,6 +14,21 @@ crumb :profile do
   parent :mypage
 end
 
+crumb :logout do
+  link "ログアウト", logout_user_path(:id)
+  parent :mypage
+end
+
+crumb :credit do
+  link "支払い方法", credit_user_path(:id)
+  parent :mypage
+end
+
+crumb :identification do
+  link "本人情報の登録", identification_user_path(:id)
+  parent :mypage
+end
+
 # crumb :projects do
 #   link "Projects", projects_path
 # end
