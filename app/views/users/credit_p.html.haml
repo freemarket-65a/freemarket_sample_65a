@@ -23,4 +23,15 @@
           = link_to "支払い方法について ＞", "#", class: "cp-regist-p"
           %i.icon-arrow-right
 
+
+          %br
+          = "**** **** **** " + @default_card_information.last4
+          %br
+          - exp_month = @default_card_information.exp_month.to_s
+          - exp_year = @default_card_information.exp_year.to_s.slice(2,3)
+          = exp_month + " / " + exp_year
+          = form_tag("#", method: :post, id: 'charge-form',  name: "inputForm") do
+            %input{ type: "hidden", name: "card_id", value: "" }
+            %button 削除する
+
 = render "products/footer"
