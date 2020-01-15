@@ -5,11 +5,8 @@ Rails.application.routes.draw do
   devise_for :users
 
   root to: 'exhibits#index'
-  # root to: 'exhibits#indexfirst'
 
-  # resources :exhibits
   resources :exhibits do
-    #Ajaxで動くアクションのルートを作成
     collection do
       get 'get_category_children', defaults: { format: 'json' }
       get 'get_category_grandchildren', defaults: { format: 'json' }

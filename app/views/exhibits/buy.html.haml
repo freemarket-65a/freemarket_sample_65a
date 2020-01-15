@@ -9,6 +9,7 @@
           = image_tag "#{@exhibit.images[-1].src}",size: "50x50"
         .purchase-text
           = @exhibit.name
+          %br
           = "¥#{@exhibit.price}  (税込) 送料込み "
 
     .pur-main__inner
@@ -48,6 +49,6 @@
     .pur-main__inner
       .pur-main__inner--content
         = form_tag(action: :pay, method: :post) do
-          %button 購入する
+          %button.btn-sold 購入する
         
   = render "shared/single-footer"
