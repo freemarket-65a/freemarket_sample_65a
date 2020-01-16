@@ -41,9 +41,9 @@
         .pur-right 
           
       .pur-main__inner--text
-        = "〒#{@exhibit.user.address.postal}"
-        %br= "#{@exhibit.user.address.prefecture} #{@exhibit.user.address.city} #{@exhibit.user.address.address}"
-        %br= "#{@exhibit.user.nickname}"
+        = "〒#{@current_user.address.postal}"
+        %br= "#{@current_user.address.prefecture} #{@current_user.address.city} #{@exhibit.user.address.address}"
+        %br= "#{@current_user.nickname}"
 
     
     .pur-main__inner
