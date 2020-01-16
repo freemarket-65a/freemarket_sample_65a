@@ -15,8 +15,6 @@ class ExhibitsController < ApplicationController
   def new
     @exhibit = Exhibit.new
     @exhibit.images.new
-    #データベースから、親カテゴリーのみ抽出し、配列化
-    @category_parent_array = Category.where(ancestry: nil)
   end
 
     # 以下全て、formatはjsonのみ
@@ -50,7 +48,6 @@ class ExhibitsController < ApplicationController
   end
 
   def edit
-    @category_parent_array = Category.where(ancestry: nil)
   end
 
   def update
