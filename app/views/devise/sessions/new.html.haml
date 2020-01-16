@@ -1,17 +1,18 @@
-= render "shared/single-header"
+.single-container
+  = render "shared/single-header"
 
-.login-main
-  .login-main__top
-    .text アカウントをお持ちでない方はこちら
-    = link_to "新規会員登録", "/users/sign_up", class: "login-main__top--btn btn btn-new"
-  
-  .login-main__inner
-    .login-main__inner--form
-      = form_with model: @user, url: user_session_path, id: 'new_user', class: 'new_user', local: true do |f|
-        = f.email_field :email, autofocus: true, class: "login-form input-default", placeholder: "メールアドレス"
+  .login-main
+    .login-main__top
+      .text アカウントをお持ちでない方はこちら
+      = link_to "新規会員登録", step1_signup_index_path, class: "login-main__top--btn btn btn-new"
+    
+    .login-main__inner
+      .login-main__inner--form
+        = form_with model: @user, url: user_session_path, id: 'new_user', class: 'new_user', local: true do |f|
+          = f.email_field :email, autofocus: true, class: "login-form input-default", placeholder: "メールアドレス"
 
-        = f.password_field :password, autocomplete: "off", class: "login-form input-default", placeholder: "パスワード"
+          = f.password_field :password, autocomplete: "off", class: "login-form input-default", placeholder: "パスワード"
 
-        = f.submit "ログイン", class: "btn btn-mail"
+          = f.submit "ログイン", class: "btn btn-mail"
 
-= render "shared/single-footer"
+  = render "shared/single-footer"
