@@ -24,20 +24,24 @@ Things you may want to cover:
 * ...
 ## usersテーブル
 
-|Column       |Type       |Options                        |
-|-------------|-----------|-------------------------------|
-|nickname     |string     |null: false , add_index        |
-|email        |string     |null: false                    |
-|password     |string     |null: false                    |
-|family_name  |string     |null: false                    |
-|last_name    |string     |null: false                    |
-|birthday     |integer    |null: false                    |
-|phonenumber  |string     |null: false                    |
+|Column        |Type       |Options                        |
+|--------------|-----------|-------------------------------|
+|nickname      |string     |null: false , add_index        |
+|email         |string     |null: false                    |
+|password      |string     |null: false                    |
+|family_name   |string     |null: false                    |
+|last_name     |string     |null: false                    |
+|last_name_kana|string     |null: false                    |
+|last_name_kana|string     |null: false                    |
+|birthday_year |integer    |null: false                    |
+|birthday_month|integer    |null: false                    |
+|birthday_day  |integer    |null: false                    |
+|phonenumber   |string     |null: false                    |
 
 ### Association
 - has_many :comments
 - has_many :products
-- has_one  :pay, dependent: destroy
+- has_one  :card, dependent: destroy
 - has_one  :address, dependent: destroy
 
 
@@ -61,48 +65,32 @@ belongs_to :user
 |Column          |Type        |Options                        |
 |----------------|------------|-------------------------------|
 |user_id         |references  |null: false, foreign_key: true |
-|card_number     |integer     |null: false                    |
-|year            |integer     |null: false                    |
-|month           |integer     |null: false                    |
-|name            |string      |null: false                    |
-|security_number |integer     |null: false                    |
+|customer_id     |integer     |null: false                    |
+|card_id         |integer     |null: false                    |
 
 ### Association
 - belongs_to :user
 
 
-## commentsテーブル
-
-|Column          |Type        |Options                        |
-|----------------|------------|-------------------------------|
-|user_id         |references  |null: false, foreign_key: true |
-|product_id      |references  |null: false, foreign_key: true |
-|comment         |text        |null: false                    |
-
-### Association
-- belongs_to :user
-- belongs_to :product
-
-
-## productsテーブル
+## exhibitsテーブル
 
 |Column           |Type        |Options                        |
 |-----------------|------------|-------------------------------|
 |user_id          |references  |null: false, foreign_key: true |
-|category_id      |references  |null: false, foreign_key: true |
-|brand_id         |references  |null: false, foreign_key: true |
+|category_id      |integer     |null: false, foreign_key: true |
+|conditioin_id    |integer     |null: false                    |
+|delicharge_id    |integer     |null: false                    |
+|shipfrom_id      |integer     |null: false                    |
+|delidate_id      |integer     |null: false                    |
 |price            |integer     |null: false                    |
 |name             |string      |null: false                    |
-|registration_date|string      |null: false                    |
-|shipping_charges |string      |null: false                    |
-|shipping_area    |string      |null: false                    |
+|details          |text        |null: false                    |
+|status           |integer     |null: false                    |
 
 ### Association
 - belongs_to :user
-- has_many :comments
 - has_many :images
 - belongs_to :category
-- belongs_to :brand
 
 
 ## imagesテーブル
@@ -110,10 +98,10 @@ belongs_to :user
 |Column          |Type        |Options                        |
 |----------------|------------|-------------------------------|
 |product_id      |references  |null: false, foreign_key: true |
-|image           |text        |null: false                    |
+|src             |text        |null: false                    |
 
 ### Association
-- belongs_to :product
+- belongs_to :exhibit
 
 
 ## categoriesテーブル
@@ -124,15 +112,6 @@ belongs_to :user
 |name            |string      |null: false                    |
 
 ### Association
-- has_many :products
+- has_many :exhibits
 - has_ancestry
 
-
-## brandsテーブル
-
-|Column          |Type        |Options                        |
-|----------------|------------|-------------------------------|
-|name            |string      |null: false                    |
-
-### Association
-- has_many :products
