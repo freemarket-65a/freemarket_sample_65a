@@ -60,12 +60,9 @@ belongs_to :user
 
 |Column          |Type        |Options                        |
 |----------------|------------|-------------------------------|
-|user_id         |references  |null: false, foreign_key: true |
-|card_number     |integer     |null: false                    |
-|year            |integer     |null: false                    |
-|month           |integer     |null: false                    |
-|name            |string      |null: false                    |
-|security_number |integer     |null: false                    |
+|user_id         |integer     |                               |
+|customer_id     |string      |                               |
+|card_id         |string      |                               |
 
 ### Association
 - belongs_to :user
